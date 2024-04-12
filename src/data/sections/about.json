@@ -1,0 +1,17 @@
+{
+    "image": {
+        "url": "/img/photo/videobanner1.jpg",
+        "alt": "img"
+    },
+    "number": {
+        "value": "17",
+        "label": "<span class=\"mil-marker\">Years</span> of <br/>successful <br/>work"
+    },
+    "title": "From 1953 until 1987, the drinking water at Camp Lejeune in North Carolina was toxic.",
+    "subtitle": "The Problem",
+    "description": "Marines, their families, and civilian workers stationed at Camp Lejeune were exposed to water that was contaminated with cancer-causing chemicals such as benzene, TCE (trichloroethylene), PCE (perchloroethylene), and vinyl chloride. These chemicals were found in 2 of the primary water treatment facilities on base – Hadnot Point and Tarawa Terrace.",
+    "button": {
+        "link": "https://www.youtube.com/watch?v=vy7XSay3wlg",
+        "label": "Watch video"
+    }
+}

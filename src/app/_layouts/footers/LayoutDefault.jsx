@@ -1,0 +1,63 @@
+"use client";
+
+import Link from "next/link";
+import AppData from "@data/app.json";
+import { usePathname } from 'next/navigation';
+
+const DefaultFooter = () => {
+  const asPath = usePathname();
+
+  return (
+    <>
+    {/* footer */}
+    <footer className="mil-relative bgGrey">
+        <div className="container mil-p-120-90">
+            <div className="row align-items-end">
+                <div className="col-lg-4" style={{textAlign: "center"}}>
+                    <Link href="/" className="mil-logo">
+                        <img src={AppData.header.logo.image} alt={AppData.header.logo.alt} style={{"width": "300px"}} />
+                    </Link>
+                    <br />
+                    <a href="tel:800-849-5291" className="mil-light" style={{fontSize: "20px", top: "20px", position: "relative" }}>
+                        <img src="/img/icons/phone-call.svg" width="20"></img> 800-849-5291
+                    </a><br/>
+                    <a href="mailto:JusticeForCampLejeune@wallacegraham.com" className="mil-light" style={{fontSize: "14px", top: "20px", position: "relative" }}>
+                        <img src="/img/icons/mail-alt-1.svg" style={{top:"5px", position:"relative"}}></img> JusticeForCampLejeune@wallacegraham.com
+                    </a><br/>
+                    <p className="mil-light" style={{position:"relative", top:"30px"}}>525 N. Main St.<br/>Salisbury, NC 28144</p>
+                </div>
+                <div className="col-lg-4">                   
+                </div>
+                <div className="col-lg-4" style={{textAlign: "center"}}>
+                    <Link href="/" className="mil-logo">
+                        <img src={AppData.footer.logo.image} alt={AppData.footer.logo.alt} style={{"width": "100px"}} />
+                    </Link>
+                    <br />
+                    <a href="tel:866-772-996" className="mil-light" style={{fontSize: "20px", top: "20px", position: "relative" }}>
+                        <img src="/img/icons/phone-call.svg" width="20"></img> 866-772-9960
+                    </a><br/>
+                    <a href="mailto:attorneys@rhinelawfirm.com" className="mil-light" style={{fontSize: "14px", top: "20px", position: "relative" }}>
+                        <img src="/img/icons/mail-alt-1.svg" style={{top:"5px", position:"relative"}}></img> attorneys@rhinelawfirm.com
+                    </a><br/>
+                    <p className="mil-light" style={{position:"relative", top:"30px"}}>1612 Military Cutoff Road Suite 300<br/>Wilmington, NC 28403</p>
+                </div>
+            </div>
+        </div>
+        <div className="container-fluid">
+
+            <div className="mil-footer-bottom">
+                <p className="mil-light-soft mil-mb-15">{AppData.footer.copy}</p>
+                <ul className="mil-light-soft mil-mb-15">
+                    {AppData.footer.menu.map((item, index) => (
+                    <li><a href={item.link}>{item.label}</a></li>
+                    ))}
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+    {/* footer end */}
+    </>
+  );
+};
+export default DefaultFooter;

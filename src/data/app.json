@@ -1,0 +1,155 @@
+{
+    "settings": {
+        "siteName": "Justice for Camp Lejeune",
+        "siteDescription": "Marines, their families, and civilian workers stationed at Camp Lejeune were exposed to water that was contaminated with cancer-causing chemicals.",
+        "formspreeURL": "https://formspree.io/f/your_api_key",
+        "mailchimp": {
+            "url": "",
+            "key": ""
+        },
+        "perPage": 6
+    },
+    "header": {
+        "logo": {
+            "image": "/img/logo/Wallace-Graham-logo.svg",
+            "alt": "Wallace & Graham"
+        },
+        "menu": [
+            {
+                "label": "Home",
+                "link": "/",
+                "children": []
+            },
+            {
+                "label": "FAQs",
+                "link": "/#faqs",
+                "children": []
+            },
+            {
+                "label": "About Us",
+                "link": "/about",
+                "children": [
+                    {
+                        "label": "About Us",
+                        "link": "/about"
+                    },
+                    {
+                        "label": "Attorneys",
+                        "link": "/attorneys"
+                    }
+                ]
+            },
+            {
+                "label": "Blog",
+                "link": "/blog",
+                "children": []
+            },
+            {
+                "label": "Contact Us",
+                "link": "/contact",
+                "children": 0
+            },
+            {
+                "label": "Other",
+                "link": "/team",
+                "children": [
+                    {
+                        "label": "About",
+                        "link": "/about"
+                    },
+                    {
+                        "label": "Team",
+                        "link": "/team"
+                    },
+                    {
+                        "label": "Team Member",
+                        "link": "/team/team-01"
+                    },
+                    {
+                        "label": "Coming Soon",
+                        "link": "/coming-soon"
+                    },
+                    {
+                        "label": "404",
+                        "link": "/404"
+                    }
+                ]
+            }
+        ]
+    },
+    "footer": {
+        "logo": {
+            "image": "/img/logo/Rhine_white.svg",
+            "alt": "Logo"
+        },
+        "copy": "© 2024 Wallace & Graham & Rhine Law Firm P.C. . All rights reserved.",
+        "menu": [
+            {
+                "label": "FAQs",
+                "link": "/#faqs"
+            },
+            {
+                "label": "About Us",
+                "link": "/about"
+            },
+            {
+                "label": "News",
+                "link": "/news"
+            },
+            {
+                "label": "Blog",
+                "link": "/blog"
+            },
+            {
+                "label": "Studies",
+                "link": "/studies"
+            }
+        ]
+    },
+    "social": [
+        {
+            "link": "https://facebook.com",
+            "title": "Facebook"
+        },
+        {
+            "link": "https://twitter.com",
+            "title": "Twitter"
+        },
+        {
+            "link": "https://instagram.com",
+            "title": "Instagram"
+        },
+        {
+            "link": "https://youtube.com",
+            "title": "Youtube"
+        }
+    ],
+    "projects": {
+        "categories": [
+            {
+                "name": "Architecture",
+                "slug": "architecture"
+            },
+            {
+                "name": "Interior",
+                "slug": "interior"
+            },
+            {
+                "name": "Decor",
+                "slug": "decor"
+            }
+        ]
+    },
+    "team": {
+        "categories": [
+            {
+                "name": "Wallace & Graham",
+                "slug": "wg"
+            },
+            {
+                "name": "Rhine Law Firm",
+                "slug": "rhine"
+            }
+        ]
+    }
+}

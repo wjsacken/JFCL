@@ -1,0 +1,36 @@
+{
+    "bg_image": "/img/photo/3.jpg",
+    "title": "Frequently Asked Questions",
+    "subtitle": "FAQs",
+    "description": "If you do not see an answer to your questions here, please feel free to contact us and we will be happy to get you an answer.",
+    "items": [
+        {
+            "title": "Will This Affect My VA Benefits?",
+            "text": "No! Filing a claim under the Camp Lejeune Justice Act (CLJA) will have no impact on your VA disability, widow or medical benefits. Similar to any other injury lawsuit, the law does allow for any amount of VA disability or Medicare/Medicaid benefits related to the illness giving rise to the CLJA claim to be offset from any award or settlement; however, the government could agree to waive that offset when that time comes."
+        },
+        {
+            "title": "What If A Potential Claimant Died Many Years Ago?",
+            "text": "Deceased individuals, regardless of how long ago they passed away, can also qualify for a claim through their estate's personal representative. The Camp Lejeune Justice Act waives the statute of limitations defense, so a deceased's family may still recover if the death was related to the contaminated water."
+        },
+        {
+            "title": "How Long Do We Have To File A Claim?",
+            "text": "The law will only allow individuals who qualify to file claims for TWO YEARS from the date this bill was signed into law (August 10, 2022). So, that means that your claim must be filed no later than August 10, 2024. Any claim filed after the deadline could be subject to dismissal, so please do not wait to act!"
+        },
+        {
+            "title": "Is This Only For Marines?",
+            "text": "No! This new law allows anyone who was exposed to the toxic Camp Lejeune water from 1953 to 1987 (for at least 30 days) to bring a claim. This includes Marines, their family members, civilian employees, and anyone else who was exposed."
+        },
+        {
+            "title": "Where Will The Cases Be Filed?",
+            "text": "First, each claim must be filed administratively with the Department of the Navy's JAG office. If that office either denies the claim or fails to act on it within six months, it can then be filed only in federal court in the Eastern District of North Carolina. This is a court our firm is very familiar with and has tried many cases there with great success. All of our lawyers working on this case are already admitted to practice in the EDNC."
+        },
+        {
+            "title": "Is This A Class Action Lawsuit?",
+            "text": "No. This is an individual claim for you or your loved-one. A class action involves a group of plaintiffs who have a similar injury. In this case, there are many different situations - some have died, some have become disabled, and some have recovered. Each of our clients' situations are unique and we treat them as such."
+        },
+        {
+            "title": "How Long Will This Take?",
+            "text": "We wish we knew! This is a brand new litigation based on a brand new statute, so there is naturally some uncertainty. Although our firm has litigated very similar occupational disease cancer cases before, nothing quite like the Camp Lejeune Justice Act has ever passed Congress. Once we begin to file our initial slate of cases, a judge gets assigned, and initial discussions are had with the Department of the Navy and Department of Justice, we will learn a great deal more. We are confident those agencies will work diligently to move these claims forward in as efficient a manner as possible."
+        }
+    ]
+}

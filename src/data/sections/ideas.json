@@ -1,0 +1,60 @@
+{
+    "title": "Effects of Contaminated Water",
+    "subtitle": "The Effects",
+    "description": "The chemicals found in the Camp Lejeune drinking water have been found to cause many different cancers and illnesses including:",
+    "button": {
+        "link": "/about",
+        "label": "More About Us"
+    },
+    "items": [
+        {
+            "label": "Lung cancer"
+        },
+        {
+            "label": "Prostate cancer"
+        },
+        {
+            "label": "Breast cancer"
+        },
+        {
+            "label": "Colon cancer"
+        },
+        {
+            "label": "Kidney disease or cancer"
+        },
+        {
+            "label": "Bladder cancer"
+        },
+        {
+            "label": "Laryngeal cancer"
+        },
+        {
+            "label": "Myelodysplastic syndrome"
+        },
+        {
+            "label": "Pancreatic cancer"
+        },
+        {
+            "label": "Rectal cancer"
+        },
+        {
+            "label": "Leukemia"
+        },
+        {
+            "label": "Non-Hodgkin's lymphoma"
+        },
+        {
+            "label": "Liver Cancer"
+        },
+        {
+            "label": "Parkinson disease"
+        },
+        {
+            "label": "Scleroderma/systemic sclerosis"
+        },
+        {
+            "label": "Multiple myeloma"
+        }
+        
+    ]
+}
