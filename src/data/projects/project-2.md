@@ -1,11 +1,12 @@
 ---
 #preview
-title: City House
-image: /img/covers/2.jpg
-category: Architecture
+title: ATSDR Camp Lejeune
+image: /img/covers/1.jpg
+category: Chemicals
 category_slug: architecture
 date: may 24 2023
 orientation: vertical
+link: https://www.atsdr.cdc.gov/sites/lejeune/health-effects.html
 
 #full details
 intro:

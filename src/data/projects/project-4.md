@@ -1,11 +1,12 @@
 ---
 #preview
-title: Cascade of Lava
-image: /img/covers/4.jpg
-category: Decor
+title: Public Health Activities
+image: /img/covers/1.jpg
+category: Health
 category_slug: decor
 date: may 24 2023
 orientation: vertical
+link: https://www.atsdr.cdc.gov/sites/lejeune/activities.html
 
 #full details
 intro:

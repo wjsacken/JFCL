@@ -1,10 +1,11 @@
 ---
 #preview
-title: Kemia Industrial Factory
-image: /img/covers/3.jpg
-category: Architecture
+title: Contaminated Drinking Water at U.S. Marine Corps Base Camp Lejeune
+image: /img/covers/1.jpg
+category: Water
 category_slug: architecture
 date: may 24 2023
+link: https://www.atsdr.cdc.gov/sites/lejeune/docs/health_survey_report-508.pdf
 
 #full details
 intro:

@@ -47,13 +47,7 @@ const ProjectsMasonry = ({ projects, categories }) => {
     return (
       <>
         {/* filter */}
-        <div className="mil-filter mil-up mil-mb-90">
-            <div className="mil-filter-links">
-                <a href="#" data-filter="*" className="mil-current" onClick={ (e) => handleFilterKeyChange("*", e)}>All</a>
-                {categories.map((item, key) => (
-                <a href="#" data-filter={`${item.slug}`} key={`projects-filter-item-${key}`} onClick={(e) => handleFilterKeyChange(item.slug, e)}>{item.name}</a>
-                ))}
-            </div>
+        <div className="mil-filter">
         </div>
         {/* filter end */}
         
@@ -67,12 +61,10 @@ const ProjectsMasonry = ({ projects, categories }) => {
                 {projects.map((item, key) => (
                 <div className={`mil-grid-item ${item.category_slug}`} key={`projects-item-${key}`}>
 
-                    <Link href={`/projects/${item.id}`} className={item.orientation == "vertical" ? "mil-portfolio-item-2 mil-long-item mil-mb-30" : "mil-portfolio-item-2 mil-square-item mil-mb-30"}>
-                        <img src={item.image} alt={item.title} />
-
+                    <Link href={`${item.link}`} className={item.orientation == "vertical" ? "mil-portfolio-item-2 mil-long-item mil-mb-30" : "mil-portfolio-item-2 mil-square-item mil-mb-30"}>
                         <div className="mil-project-descr">
                             <h3 className="mil-upper mil-mb-30">{item.title}</h3>
-                            <div className="mil-link mil-upper">Start A Project <div className="mil-arrow mil-light"><img src="/img/icons/1.svg" alt="arrow" /></div></div>
+                            <div className="mil-link mil-upper">Read more <div className="mil-arrow mil-light"><img src="/img/icons/1.svg" alt="arrow" /></div></div>
                         </div>
 
                         <div className="mil-category">{item.category}</div>

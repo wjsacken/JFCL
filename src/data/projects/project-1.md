@@ -1,15 +1,16 @@
 ---
 #preview
-title: Interior design studio
+title: Am I eligible for disability benefits from VA?
 image: /img/covers/1.jpg
-category: Architecture
+category: VA Benefits
 category_slug: architecture
 date: may 24 2023
+link: https://www.va.gov/disability/eligibility/hazardous-materials-exposure/camp-lejeune-water-contamination/
 
 #full details
 intro:
   subtitle: "Modern concept"
-  title: "Interior Design <br/><span class=\"mil-accent\">Studio</span>"
+  title: "Am I <span class=\"mil-accent\">eligible</span> for disability benefits from VA?"
   bgImage: "/img/covers/8.jpg"
 
 description:

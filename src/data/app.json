@@ -45,35 +45,19 @@
                 "children": []
             },
             {
+                "label": "News",
+                "link": "/news",
+                "children": []
+            },
+            {
+                "label": "Studies",
+                "link": "/studies",
+                "children": []
+            },
+            {
                 "label": "Contact Us",
                 "link": "/contact",
                 "children": 0
-            },
-            {
-                "label": "Other",
-                "link": "/team",
-                "children": [
-                    {
-                        "label": "About",
-                        "link": "/about"
-                    },
-                    {
-                        "label": "Team",
-                        "link": "/team"
-                    },
-                    {
-                        "label": "Team Member",
-                        "link": "/team/team-01"
-                    },
-                    {
-                        "label": "Coming Soon",
-                        "link": "/coming-soon"
-                    },
-                    {
-                        "label": "404",
-                        "link": "/404"
-                    }
-                ]
             }
         ]
     },

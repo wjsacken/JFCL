@@ -1,11 +1,10 @@
 import { Suspense } from "react";
-
 import Link from "next/link";
 import Date from '@library/date';
 
 import SearchBarModule from '@components/SearchBar';
 
-import { getSortedPostsData } from "@library/posts";
+import { getSortedPostsData } from "@library/articles";
 import { getSortedAuthorsData } from "@library/authors";
 
 async function Sidebar() {

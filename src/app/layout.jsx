@@ -32,6 +32,7 @@ const Layouts = ({
 
           <ScrollbarProgress />
         </div>
+      <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/22033132.js"></script>
       </body>
     </html>
   );

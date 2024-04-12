@@ -479,11 +479,12 @@ button
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border: none;
-    background-color: $accent;
-    color: $dark;
-    padding: 0 60px;
-    height: 70px;
+    border: 1px solid $accent;
+    border-radius: 50px;
+    background-color: transparent;
+    color: $light;
+    padding: 0 20px;
+    height: 50px;
     text-transform: uppercase;
     font-weight: 600;
     transition: $t-sm;
@@ -499,12 +500,50 @@ button
     }
 
     &.mil-sm {
-        padding: 0 40px;
-        height: 60px;
+        padding: 0 25px;
+        height: 45px;
     }
 
     &:hover {
         filter: brightness(110%);
+        background-color: $accent;
+        border: 1px solid $light
+    }
+}
+.mil-button2 {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $accent;
+    border-radius: 50px;
+    background-color: $accent;
+    color: $light;
+    padding: 0 70px;
+    height: 50px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: $t-sm;
+    font-size: 15px;
+
+    &.mil-transparent-button {
+        background-color: transparent;
+        border: solid 1px $dark;
+    }
+
+    &.mil-fw {
+        width: 100%;
+    }
+
+    &.mil-sm {
+        padding: 0 25px;
+        height: 45px;
+    }
+
+    &:hover {
+        filter: brightness(110%);
+        background-color: $accent;
+        border: 1px solid $light
     }
 }
 
