@@ -2,7 +2,6 @@ import React, { Suspense }  from "react";
 import dynamic from "next/dynamic";
 import AppData from "@data/app.json";
 const ProjectsMasonry = dynamic( () => import("@components/ProjectsMasonry"), { ssr: false } );
-
 import { getSortedProjectsData } from "@library/projects";
 
 import PageBanner from "@components/PageBanner";
@@ -25,7 +24,7 @@ async function About() {
                   <div className="col-lg-12">
                         <div className="mil-publication">
                             <Suspense fallback={<div>Loading...</div>}>
-                                <ProjectsMasonry projects={projects} categories={AppData.projects.categories} />
+                                <ProjectsMasonry projects={projects} />
                             </Suspense>
                         </div>
                   </div>
