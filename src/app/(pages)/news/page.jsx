@@ -41,9 +41,9 @@ async function Blog() {
                       {/* filter */}
                       <div className="mil-filter mil-up mil-mb-90">
                           <div className="mil-filter-links">
-                              <Link href="/blog" className="mil-current">All</Link>
+                              <Link href="/news" className="mil-current">All</Link>
                               {categories.map((item, key) => (
-                              <Link key={`categories-item-${key}`} href={`/blog/category/${item.id}`}>{item.title}</Link>
+                              <Link key={`categories-item-${key}`} href={`/news/category/${item.id}`}>{item.title}</Link>
                               ))}
                           </div>
                       </div>
@@ -72,7 +72,7 @@ async function Blog() {
             currentPage={postsData.currentPage}
             totalItems={postsData.totalPosts}
             perPage={AppData.settings.perPage}
-            renderPageLink={(page) => `/blog/page/${page}`}
+            renderPageLink={(page) => `/news/page/${page}`}
           />
       </div>
       {/* pagination end */}

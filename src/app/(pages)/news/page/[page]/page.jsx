@@ -1,4 +1,4 @@
-import PaginatedBlog from '@components/PaginatedBlog';
+import PaginatedNews from '@components/PaginatedNews';
 import Pagination from '@components/Pagination';
 
 import Link from "next/link";
@@ -43,7 +43,7 @@ async function BlogPage( { params } ) {
                       {/* filter */}
                       <div className="mil-filter mil-up mil-mb-90">
                           <div className="mil-filter-links">
-                              <Link href="/blog" className="mil-current">All</Link>
+                              <Link href="/news" className="mil-current">All</Link>
                               {categories.map((item, key) => (
                               <Link key={`categories-item-${key}`} href={`/blog/category/${item.id}`}>{item.title}</Link>
                               ))}
@@ -51,7 +51,7 @@ async function BlogPage( { params } ) {
                       </div>
                       {/* filter end */}
                       
-                      <PaginatedBlog
+                      <PaginatedNews
                         items={postsData.posts}
                       />
 
@@ -74,7 +74,7 @@ async function BlogPage( { params } ) {
             currentPage={postsData.currentPage}
             totalItems={postsData.totalPosts}
             perPage={AppData.settings.perPage}
-            renderPageLink={(page) => `/blog/page/${page}`}
+            renderPageLink={(page) => `/news/page/${page}`}
           />
       </div>
       {/* pagination end */}
