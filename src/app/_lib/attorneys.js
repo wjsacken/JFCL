@@ -4,17 +4,17 @@ import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
 
-const teamDirectory = path.join(process.cwd(), 'src/data/team')
+const attorneyDirectory = path.join(process.cwd(), 'src/data/attorney')
 
-export function getSortedTeamData() {
+export function getSortedattorneyData() {
   // Get file names under /posts
-  const fileNames = fs.readdirSync(teamDirectory)
+  const fileNames = fs.readdirSync(attorneyDirectory)
   const allData = fileNames.map(fileName => {
     // Remove ".md" from file name to get id
     const id = fileName.replace(/\.md$/, '')
 
     // Read markdown file as string
-    const fullPath = path.join(teamDirectory, fileName)
+    const fullPath = path.join(attorneyDirectory, fileName)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
 
     // Use gray-matter to parse the post metadata section
@@ -36,8 +36,8 @@ export function getSortedTeamData() {
   })
 }
 
-export function getAllTeamIds() {
-  const fileNames = fs.readdirSync(teamDirectory)
+export function getAllattorneyIds() {
+  const fileNames = fs.readdirSync(attorneyDirectory)
   return fileNames.map(fileName => {
     return {
       params: {
@@ -47,8 +47,8 @@ export function getAllTeamIds() {
   })
 }
 
-export async function getTeamData(id) {
-  const fullPath = path.join(teamDirectory, `${id}.md`)
+export async function getattorneyData(id) {
+  const fullPath = path.join(attorneyDirectory, `${id}.md`)
 
   if ( fs.existsSync(fullPath) ) {
     const fileContents = fs.readFileSync(fullPath, 'utf8')

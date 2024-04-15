@@ -90,40 +90,6 @@
             }
         ]
     },
-    "social": [
-        {
-            "link": "https://facebook.com",
-            "title": "Facebook"
-        },
-        {
-            "link": "https://twitter.com",
-            "title": "Twitter"
-        },
-        {
-            "link": "https://instagram.com",
-            "title": "Instagram"
-        },
-        {
-            "link": "https://youtube.com",
-            "title": "Youtube"
-        }
-    ],
-    "projects": {
-        "categories": [
-            {
-                "name": "Architecture",
-                "slug": "architecture"
-            },
-            {
-                "name": "Interior",
-                "slug": "interior"
-            },
-            {
-                "name": "Decor",
-                "slug": "decor"
-            }
-        ]
-    },
     "team": {
         "categories": [
             {

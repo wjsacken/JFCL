@@ -7,11 +7,8 @@ import { useRouter } from 'next/navigation'
 const SearchBarModule = () => {
     const router = useRouter()
     const searchParams = useSearchParams()
-    
     const query = searchParams.get('key') || '';
-
     const [search, setSearch] = useState(query);
-
     const createQueryString = useCallback(
         (name, value) => {
             const params = new URLSearchParams(searchParams)
@@ -21,17 +18,14 @@ const SearchBarModule = () => {
         },
         [searchParams]
     )
-
     const searchChangeHandler = event => {
         setSearch(event.target.value);
     };
-
     const searchPressHandler = event => {
         if (event.key === 'Enter' || event.keyCode === 13) {
             router.push("/search" + '?' + createQueryString('key', search))
         }
     };
-
     return (
         <div className="mil-sidebar-search mil-up mil-mb-30">
             <input 

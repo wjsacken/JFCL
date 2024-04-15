@@ -1,26 +1,19 @@
 import PaginatedBlog from '@components/PaginatedBlog';
 import Pagination from '@components/Pagination';
-
 import Link from "next/link";
-
 import AppData from "@data/app.json";
-
 import PageBanner from "@components/PageBanner";
 import Sidebar from "@components/Sidebar";
 import PopularPosts from "@components/sections/PopularPosts";
-
 import { getSortedCategoriesData } from "@library/categories";
 import { getPaginatedPostsData, getFeaturedPostsData } from "@library/posts";
-
 import PopularsPostsData from "@data/sections/popular-posts.json";
-
 export const metadata = {
   title: {
 		default: "Blog",
 	},
   description: AppData.settings.siteDescription,
 }
-
 async function Blog() {
   const populars = await getAllPupulars();
   const categories = await getAllCategories();
@@ -80,22 +73,16 @@ async function Blog() {
   );
 };
 export default Blog;
-
 async function getAllPupulars() {
   const popularsData = await getFeaturedPostsData( PopularsPostsData.featured )
-
   return popularsData
 }
-
 async function getAllCategories() {
   const categoriesData = await getSortedCategoriesData()
-
   return categoriesData
 }
-
 async function getAllPosts() {
   const { posts, total } = getPaginatedPostsData( AppData.settings.perPage, 1 );
-
   return {
     posts: posts,
     totalPosts: total,
