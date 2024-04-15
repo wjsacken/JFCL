@@ -1,9 +1,6 @@
-module.exports = async (phase, { defaultConfig }) => {
-  /**
-   * @type {import('next').NextConfig}
-   */
-  const nextConfig = {
-    output: 'export',
-  }
-  return nextConfig
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true
 }
+
+module.exports = nextConfig
