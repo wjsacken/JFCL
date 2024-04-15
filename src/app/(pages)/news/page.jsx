@@ -1,4 +1,4 @@
-import PaginatedBlog from '@components/PaginatedBlog';
+import PaginatedNews from '@components/PaginatedNews';
 import Pagination from '@components/Pagination';
 
 import Link from "next/link";
@@ -49,7 +49,7 @@ async function Blog() {
                       </div>
                       {/* filter end */}
                       
-                      <PaginatedBlog
+                      <PaginatedNews
                         items={postsData.posts}
                       />
 

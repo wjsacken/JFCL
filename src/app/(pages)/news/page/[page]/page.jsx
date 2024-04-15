@@ -12,25 +12,24 @@ import Sidebar from "@components/Sidebar";
 import PopularPosts from "@components/sections/PopularPosts";
 
 import { getSortedCategoriesData } from "@library/categories";
-import { getPaginatedPostsData, getFeaturedPostsData } from "@library/posts";
+import { getPaginatedPostsData, getFeaturedArticlesData } from "@library/articles";
 
-import PopularsPostsData from "@data/sections/popular-posts.json";
 
 export const metadata = {
   title: {
-		default: "Blog",
+		default: "News",
 	},
   description: AppData.settings.siteDescription,
 }
 
-async function BlogPage( { params } ) {
+async function NewsPage( { params } ) {
   const populars = await getAllPupulars();
   const categories = await getAllCategories();
-  const postsData = await getAllPosts(params);
+  const postsData = await getAllArticles(params);
 
   return (
     <>
-      <PageBanner pageTitle={"Insights"} breadTitle={"Blog"} bgImage={"/img/photo/12.jpg"} />
+      <PageBanner pageTitle={"Insights"} breadTitle={"News"} bgImage={"/img/photo/12.jpg"} />
 
       {/* blog */}
       <section>
@@ -43,9 +42,9 @@ async function BlogPage( { params } ) {
                       {/* filter */}
                       <div className="mil-filter mil-up mil-mb-90">
                           <div className="mil-filter-links">
-                              <Link href="/blog" className="mil-current">All</Link>
+                              <Link href="/news" className="mil-current">All</Link>
                               {categories.map((item, key) => (
-                              <Link key={`categories-item-${key}`} href={`/blog/category/${item.id}`}>{item.title}</Link>
+                              <Link key={`categories-item-${key}`} href={`/news/category/${item.id}`}>{item.title}</Link>
                               ))}
                           </div>
                       </div>
@@ -74,7 +73,7 @@ async function BlogPage( { params } ) {
             currentPage={postsData.currentPage}
             totalItems={postsData.totalPosts}
             perPage={AppData.settings.perPage}
-            renderPageLink={(page) => `/blog/page/${page}`}
+            renderPageLink={(page) => `/news/page/${page}`}
           />
       </div>
       {/* pagination end */}
@@ -99,21 +98,21 @@ async function getAllCategories() {
   return categoriesData
 }
 
-async function getAllPosts( params ) {
+async function getAllArticles( params ) {
   const page = Number(params?.page) || 1
-  const { posts, total } = getPaginatedPostsData( AppData.settings.perPage, page );
+  const { articles, total } = getPaginatedArticlesData( AppData.settings.perPage, page );
 
-  if (!posts.length) {
+  if (!article.length) {
     notFound()
   }
 
   if (page === 1) {
-    redirect('/blog')
+    redirect('/news')
   }
 
   return {
-    posts: posts,
-    totalPosts: total,
+    articles: articles,
+    totalArticles: total,
     currentPage: page
   }
 }

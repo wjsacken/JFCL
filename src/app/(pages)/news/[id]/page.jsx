@@ -1,4 +1,4 @@
-import { getAllPostsIds, getPostData } from "@library/posts";
+import { getAllPostsIds, getPostData } from "@library/articles";
 import { getAuthorData } from "@library/authors";
 
 import Date from '@library/date';
