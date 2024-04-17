@@ -1,21 +1,16 @@
 import PaginatedNews from '@components/PaginatedNews';
 import Pagination from '@components/Pagination';
-
 import Link from "next/link";
 import { redirect } from 'next/navigation'
 import { notFound } from 'next/navigation';
-
 import AppData from "@data/app.json";
-
 import PageBanner from "@components/PageBanner";
 import Sidebar from "@components/Sidebar";
 import PopularPosts from "@components/sections/PopularPosts";
-
 import { getSortedCategoriesData } from "@library/categories";
 import { getPaginatedPostsData, getFeaturedPostsData } from "@library/posts";
-
 import PopularsPostsData from "@data/sections/popular-posts.json";
-
+export const runtime = 'edge';
 export const metadata = {
   title: {
 		default: "Blog",

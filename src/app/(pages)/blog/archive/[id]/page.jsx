@@ -1,18 +1,14 @@
 import Link from "next/link";
-
 import PageBanner from "@components/PageBanner";
 import Sidebar from "@components/Sidebar";
 import PaginatedBlog from '@components/PaginatedBlog';
-
 import { notFound } from 'next/navigation';
-
 import { getSortedCategoriesData } from "@library/categories";
 import { getAllArchivesIds, getArchiveData } from "@library/archives";
 import { getArchivePosts } from "@library/posts";
-
+export const runtime = 'edge';
 export async function generateMetadata({ params }) {
   const archiveData = await getSingleArchiveData(params);
-  
   return {
     title: archiveData.month+', '+archiveData.year + " | Archive | Blog",
   }

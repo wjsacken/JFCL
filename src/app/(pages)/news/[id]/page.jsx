@@ -1,15 +1,11 @@
 import { getAllPostsIds, getPostData } from "@library/articles";
 import { getAuthorData } from "@library/authors";
-
 import Date from '@library/date';
-
 import Link from "next/link";
-
 import { notFound } from 'next/navigation';
-
 import PageBannerTwo from "@components/PageBannerTwo";
 import Sidebar from "@components/Sidebar";
-
+export const runtime = 'edge';
 async function PostsDetail( { params } ) {
   const postData = await getSinglePostData(params);
   const authorData = await getSingleAuthorData(postData.author.toLowerCase().replace(' ', '-'));
