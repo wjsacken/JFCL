@@ -12,7 +12,7 @@ const DefaultFooter = () => {
     {/* footer */}
     <footer className="mil-relative bgGrey">
         <div className="container mil-p-120-90">
-            <div className="row align-items-end">
+            <div className="row align-items-end siteFoot">
                 <div className="col-lg-4" style={{textAlign: "center"}}>
                     <Link href="/" className="mil-logo">
                         <img src={AppData.header.logo.image} alt={AppData.header.logo.alt} style={{"width": "300px"}} />
@@ -44,7 +44,6 @@ const DefaultFooter = () => {
             </div>
         </div>
         <div className="container-fluid">
-
             <div className="mil-footer-bottom">
                 <p className="mil-light-soft mil-mb-15">{AppData.footer.copy}</p>
                 <ul className="mil-light-soft mil-mb-15">

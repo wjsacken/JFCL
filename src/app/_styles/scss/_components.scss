@@ -84,6 +84,9 @@ banner
     height: 100%;
     object-fit: cover;
     object-position: center;
+    @media screen and (max-width: 600px) {
+        object-position: right;
+    }
 }
 .bgGrey {
     background-color: #131313
@@ -1265,7 +1268,11 @@ pre{
         padding: 30px 0;
     }
 }
-
+.siteFoot {
+    @media screen and (max-width: 600px) {
+        min-height: 440px;
+    }
+}
 /* -------------------------------------------
 
 top panel
@@ -1293,6 +1300,24 @@ top panel
             display: flex;
             justify-content: space-between;
             align-items: center;
+            @media screen and (max-width: 600px) {
+                flex-direction: row;
+                align-items: center;
+            }
+            & img {
+                @media screen and (max-width: 600px) {
+                    max-width: 190px !important;
+                    max-height: 35px;
+                    
+                }
+            }
+            & .rhineLogo {
+                @media screen and (max-width: 600px) {
+                width: auto !important;
+                margin-bottom: 0px !important;
+                margin-top: 5px;
+                }
+            }
         }
     }
 
