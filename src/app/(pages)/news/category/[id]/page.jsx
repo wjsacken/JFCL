@@ -1,11 +1,14 @@
 import Link from "next/link";
+
 import PageBanner from "@components/PageBanner";
 import Sidebar from "@components/Sidebar";
 import PaginatedBlog from '@components/PaginatedBlog';
+
 import { notFound } from 'next/navigation';
+
 import { getAllCategoriesIds, getCategoryData, getSortedCategoriesData } from "@library/categories";
 import { getCategoryPosts } from "@library/posts";
-export const runtime = 'edge';
+
 export async function generateMetadata({ params }) {
   const categoryData = await getSingleCategoryData(params);
 

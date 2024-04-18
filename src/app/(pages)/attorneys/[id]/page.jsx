@@ -1,8 +1,10 @@
 
 import React, { Suspense } from "react";
+
 import { notFound } from 'next/navigation';
+
 import { getAllTeamIds, getTeamData } from "@library/team";
-export const runtime = 'edge';
+
 export async function generateMetadata({ params }) {
     const postData = await getSingleTeamData(params);
 
