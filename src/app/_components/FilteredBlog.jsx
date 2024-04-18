@@ -6,7 +6,7 @@ import Image from "next/image";
 
 import { useSearchParams } from 'next/navigation'
 
-async function FilteredBlogPosts( { posts } ) {
+function FilteredBlogPosts( { posts } ) {
     const searchParams = useSearchParams()
     const query = searchParams.get('key')
 

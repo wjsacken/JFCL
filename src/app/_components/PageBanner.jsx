@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
-import { useSearchParams } from 'next/navigation';
 import Image from "next/image";
 
 import { useEffect } from "react";
@@ -18,13 +17,6 @@ const PageBanner = ({ pageTitle, breadTitle, bgImage }) => {
   } else {
     const regex = /(<([^>]+)>)/gi;
     clearBreadTitle = pageTitle.replace(regex, "");
-  }
-
-  if ( pageTitle == 'Search: %s' ) {
-    const searchParams = useSearchParams();
-    const query = searchParams.get('key');
-    
-    pageTitle = 'Search: '+query;
   }
   
   useEffect(() => {
