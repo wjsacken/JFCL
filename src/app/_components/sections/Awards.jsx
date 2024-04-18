@@ -1,6 +1,7 @@
 "use client";
 
 import Data from "@data/sections/awards.json";
+import Image from "next/image";
 
 import { useEffect } from "react";
 import { HoverImages } from "@common/hoverImages";
@@ -25,7 +26,7 @@ const AwardsSection = () => {
                             <p className="mil-up mil-mb-30" dangerouslySetInnerHTML={{__html : Data.description}} />
                             <a href={Data.button.link} className="mil-link mil-upper mil-up">
                                 {Data.button.label} 
-                                <span className="mil-arrow"><img src="/img/icons/1.svg" alt="arrow" /></span>
+                                <span className="mil-arrow"><Image src="/img/icons/1.svg" alt="arrow" /></span>
                             </a>
                         </div>
 
@@ -44,7 +45,7 @@ const AwardsSection = () => {
                                 ))}
                             </ul>
                             <div className="mil-img-wrapper mil-mb-30">
-                                <img src={Data.image.url} alt={Data.image.alt} />
+                                <Image src={Data.image.url} alt={Data.image.alt} />
                             </div>
                         </div>
 

@@ -2,6 +2,7 @@
 
 import Data from "@data/sections/hero-1.json";
 import Link from "next/link";
+import Image from "next/image";
 
 import { useEffect } from "react";
 import { ScrollAnimation } from "@common/scrollAnims";
@@ -15,7 +16,7 @@ const HeroOne = () => {
         <>
             {/* banner */}
             <section className="mil-banner">
-                <img src={Data.bg_image} className="mil-bg-img mil-scale" data-value-1=".4" data-value-2="1.4" alt="image" />
+                <Image src={Data.bg_image} className="mil-bg-img mil-scale" data-value-1=".4" data-value-2="1.4" alt="image" />
                 <div className="container">
                     <div className="mil-top-space" />
                     <div className="mil-banner-content">
@@ -24,7 +25,7 @@ const HeroOne = () => {
                                 <div className="mil-mb-90">
                                     <span className="mil-suptitle mil-light mil-upper mil-mb-60">{Data.subtitle}</span>
                                     <h1 className="mil-upper mil-light mil-mb-60" dangerouslySetInnerHTML={{__html : Data.title}} />
-                                    <Link href={Data.button.link} className="mil-link mil-light mil-upper">{Data.button.label} <span className="mil-arrow"><img src="img/icons/1.svg" alt="arrow" /></span></Link>
+                                    <Link href={Data.button.link} className="mil-link mil-light mil-upper">{Data.button.label} <span className="mil-arrow"><Image src="img/icons/1.svg" alt="arrow" /></span></Link>
                                 </div>
                             </div>
                             

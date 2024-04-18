@@ -1,5 +1,6 @@
 import Data from "@data/sections/recruit.json";
 import Link from "next/link";
+import Image from "next/image";
 
 const RecruitSection = () => {
     return (
@@ -23,11 +24,11 @@ const RecruitSection = () => {
 
                             <div className="mil-illustration mil-up mil-mb-90">
                                 <div className="mil-image-frame">
-                                    <img src={Data.image.url} alt={Data.image.alt} className="mil-scale" data-value-1="1" data-value-2="1.3" />
+                                    <Image src={Data.image.url} alt={Data.image.alt} className="mil-scale" data-value-1="1" data-value-2="1.3" />
                                 </div>
                                 <div className="mil-about-counter mil-center">
                                     <div className="mil-avatar mil-mb-30">
-                                        <img src={Data.avatar.image} alt={Data.avatar.name} />
+                                        <Image src={Data.avatar.image} alt={Data.avatar.name} />
                                     </div>
                                     <h5 className="mil-upper mil-mb-10">{Data.avatar.name}</h5>
                                     <p className="mil-text-sm mil-dark-soft">{Data.avatar.subname}</p>

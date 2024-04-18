@@ -2,6 +2,7 @@ import Data from "@data/sections/team.json";
 import Link from "next/link";
 import ArrowIcon from "@layouts/svg-icons/Arrow";
 import LinesIcon from "@layouts/svg-icons/Lines";
+import Image from "next/image";
 
 const TeamSection = () => {
   return (
@@ -35,7 +36,7 @@ const TeamSection = () => {
                                     {Data.col1_items.map((item, key) => (
 
                                     <div key={`services1-item-${key}`} className="mil-team-card mil-up mil-mb-30">
-                                        <img src={item.image} alt={item.name} />
+                                        <Image src={item.image} alt={item.name} />
                                         <div className="mil-description">
                                             <div className="mil-secrc-text">
                                                 <h5 className="mil-muted mil-mb-5">{item.name}</h5>
@@ -59,7 +60,7 @@ const TeamSection = () => {
                                     {Data.col2_items.map((item, key) => (
                                     
                                     <div key={`services2-item-${key}`} className="mil-team-card mil-up mil-mb-30">
-                                        <img src={item.image} alt={item.name} />
+                                        <Image src={item.image} alt={item.name} />
                                         <div className="mil-description">
                                             <div className="mil-secrc-text">
                                                 <h5 className="mil-muted mil-mb-5">{item.name}</h5>

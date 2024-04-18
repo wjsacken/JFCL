@@ -1,4 +1,5 @@
 import Data from "@data/sections/how-we-work.json";
+import Image from "next/image";
 
 const HowWeWorkSection = () => {
   return (
@@ -22,7 +23,7 @@ const HowWeWorkSection = () => {
 
                         <div className="mil-hww mil-icon-box mil-up mil-mb-60">
                             <div className="mil-icon mil-icon-border mil-mb-30">
-                                <img src={item.icon} alt="icon" />
+                                <Image src={item.icon} alt="icon" />
                             </div>
                             <h4 className="mil-upper mil-mb-20">{item.title}</h4>
                             <div className="mil-divider-sm mil-mb-20"></div>

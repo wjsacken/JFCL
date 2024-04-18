@@ -2,7 +2,7 @@
 
 import { SliderProps } from "@common/sliderProps";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import Image from "next/image";
 const FullImageSlider = ( { items } ) => {
   return (
     <>
@@ -17,7 +17,7 @@ const FullImageSlider = ( { items } ) => {
 
                     <div className="mil-illustration mil-fw-item" data-swiper-parallax-x="50" data-swiper-parallax-scale="1.3">
                         <div className="mil-image-frame">
-                            <img src={item.image} alt={item.alt} />
+                            <Image src={item.image} alt={item.alt} />
                         </div>
                     </div>
 

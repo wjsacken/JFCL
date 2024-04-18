@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from 'next/navigation';
 import { useSearchParams } from 'next/navigation';
+import Image from "next/image";
 
 import { useEffect } from "react";
 import { ScrollAnimation } from "@common/scrollAnims";
@@ -35,7 +36,7 @@ const PageBanner = ({ pageTitle, breadTitle, bgImage }) => {
     <>    
       {/* banner */}
       <section className="mil-banner mil-banner-sm">
-          <img src={bgImage} className="mil-bg-img mil-scale" data-value-1=".4" data-value-2="1.4" alt="image" style={{"objectPosition": "top"}} />
+          <Image src={bgImage} className="mil-bg-img mil-scale" data-value-1=".4" data-value-2="1.4" alt="image" style={{"objectPosition": "top"}} />
 
           <div className="mil-overlay" />
 

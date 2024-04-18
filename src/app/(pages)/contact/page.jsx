@@ -4,7 +4,7 @@ import AppData from "@data/app.json";
 
 import PageBanner from "@components/PageBanner";
 import ContactForm from "@components/ContactForm";
-
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
@@ -31,18 +31,18 @@ const Contact = () => {
                             <div className="mil-divider-lg mil-up mil-mb-30"></div>
                             <h3 className="mil-up mil-mb-10">Wallace & Graham</h3>
                             <a href="tel:800-849-5291" className="mil-mb-30">
-                                <img src="/img/icons/phone-call1.svg" width="20" style={{top:"5px", position:"relative"}}></img> 800-849-5291
+                                <Image src="/img/icons/phone-call1.svg" width="20" style={{top:"5px", position:"relative"}}></img> 800-849-5291
                             </a>
                             <br/>
                             <a href="mailto:JusticeForCampLejeune@wallacegraham.com">
-                                <img src="/img/icons/mail.svg" style={{top:"5px", position:"relative"}}></img> Email
+                                <Image src="/img/icons/mail.svg" style={{top:"5px", position:"relative"}}></img> Email
                             </a>
                             <h3 className="mil-up mt-xxl-4 mil-mb-10">Rhine Law Firm</h3>
                             <a href="tel:866-772-996" className="mil-mb-30">
-                                <img src="/img/icons/phone-call1.svg" width="20"></img> 866-772-9960
+                                <Image src="/img/icons/phone-call1.svg" width="20"></img> 866-772-9960
                             </a><br/>
                             <a href="mailto:attorneys@rhinelawfirm.com">
-                                <img src="/img/icons/mail.svg" style={{top:"5px", position:"relative"}}></img> Email
+                                <Image src="/img/icons/mail.svg" style={{top:"5px", position:"relative"}}></img> Email
                             </a>
                             
                         </div>

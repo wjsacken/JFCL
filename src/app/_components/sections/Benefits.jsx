@@ -1,5 +1,6 @@
 import Data from "@data/sections/benefits.json";
 import Link from "next/link";
+import Image from "next/image";
 
 const BenefitsSection = () => {
   return (
@@ -27,13 +28,13 @@ const BenefitsSection = () => {
                                 <Link href={item.link} className="mil-service-card mil-up mil-mb-30">
                                     <div className="mil-center">
                                         <div className="mil-icon mil-icon-lg mil-mb-30">
-                                            <img src={item.icon} alt={item.title} />
+                                            <Image src={item.icon} alt={item.title} />
                                         </div>
                                         <h4 className="mil-upper mil-mb-20">{item.title}</h4>
                                         <div className="mil-divider-sm mil-mb-20" />
                                         <p className="mil-service-text">{item.text}</p>
                                         <div className="mil-go-buton mil-icon mil-icon-lg mil-icon-accent-bg">
-                                            <img src="/img/icons/1.svg" alt="icon" />
+                                            <Image src="/img/icons/1.svg" alt="icon" />
                                         </div>
                                     </div>
                                 </Link>

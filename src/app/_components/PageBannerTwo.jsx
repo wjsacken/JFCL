@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { ScrollAnimation } from "@common/scrollAnims";
+import Image from "next/image";
 
 const PageBannerTwo = ({ subTitle, title, bgImage }) => {
   useEffect(() => {
@@ -12,7 +13,7 @@ const PageBannerTwo = ({ subTitle, title, bgImage }) => {
     <>    
         {/* banner */}
         <section className="mil-banner mil-banner-sm">
-            <img src={bgImage} className="mil-bg-img mil-scale" data-value-1=".4" data-value-2="1.4" alt="image" style={{"objectPosition": "top"}} />
+            <Image src={bgImage} className="mil-bg-img mil-scale" data-value-1=".4" data-value-2="1.4" alt="image" style={{"objectPosition": "top"}} />
 
             <div className="mil-overlay" />
 

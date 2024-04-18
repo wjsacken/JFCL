@@ -1,5 +1,6 @@
 import Data from "@data/sections/pricing.json";
 import Link from "next/link";
+import Image from "next/image";
 
 const PricingSection = () => {
     return (
@@ -33,7 +34,7 @@ const PricingSection = () => {
                             <div className="mil-price-body">
                                 <ul className="mil-icon-list mil-mb-30">
                                     {item.list.map((list_item, list_key) => (
-                                    <li key={`pricing-item-${key}-list-${list_key}`} className={list_item.active ? "mil-accent mil-up" : "mil-up"}><img src="/img/icons/11.svg" alt="icon" />{list_item.value}</li>
+                                    <li key={`pricing-item-${key}-list-${list_key}`} className={list_item.active ? "mil-accent mil-up" : "mil-up"}><Image src="/img/icons/11.svg" alt="icon" />{list_item.value}</li>
                                     ))}
                                 </ul>
                             </div>

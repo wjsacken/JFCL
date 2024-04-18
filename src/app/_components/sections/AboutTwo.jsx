@@ -1,5 +1,6 @@
 import Data from "@data/sections/about-2.json";
 import Link from "next/link";
+import Image from "next/image";
 
 const AboutTwoSection = () => {
     return (
@@ -19,7 +20,7 @@ const AboutTwoSection = () => {
 
                                 <Link href={Data.button.link} className="mil-link mil-upper mil-up mil-mb-30">
                                     {Data.button.label} 
-                                    <span className="mil-arrow"><img src="img/icons/1.svg" alt="arrow" /></span>
+                                    <span className="mil-arrow"><Image src="img/icons/1.svg" alt="arrow" /></span>
                                 </Link>
 
                                 <div className="row">
@@ -42,11 +43,11 @@ const AboutTwoSection = () => {
 
                             <div className="mil-illustration mil-up mil-mb-90">
                                 <div className="mil-image-frame">
-                                    <img src={Data.image.url} alt={Data.image.alt} className="mil-scale" data-value-1="1" data-value-2="1.3" />
+                                    <Image src={Data.image.url} alt={Data.image.alt} className="mil-scale" data-value-1="1" data-value-2="1.3" />
                                 </div>
                                 <div className="mil-about-counter mil-center">
                                     <div className="mil-avatar mil-mb-30">
-                                        <img src={Data.avatar.image} alt={Data.image.name} />
+                                        <Image src={Data.avatar.image} alt={Data.image.name} />
                                     </div>
                                     <h5 className="mil-upper mil-mb-10">{Data.avatar.name}</h5>
                                     <p className="mil-text-sm mil-dark-soft">{Data.avatar.subname}</p>

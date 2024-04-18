@@ -1,5 +1,6 @@
 import Data from "@data/sections/about-3.json";
 import Link from "next/link";
+import Image from "next/image";
 
 const AboutThreeSection = () => {
     return (
@@ -17,7 +18,7 @@ const AboutThreeSection = () => {
                                 <p className="mil-up mil-mb-40" dangerouslySetInnerHTML={{__html : Data.description}} />
                                 <ul className="mil-icon-list mil-mb-60">
                                     {Data.items.map((item, key) => (
-                                    <li className="mil-hover mil-up" key={`about-three-list-item-${key}`}><Link href={item.link}><img src="/img/icons/11.svg" alt="icon" />{item.title}</Link></li>
+                                    <li className="mil-hover mil-up" key={`about-three-list-item-${key}`}><Link href={item.link}><Image src="/img/icons/11.svg" alt="icon" />{item.title}</Link></li>
                                     ))}
                                 </ul>
                             </div>
@@ -27,7 +28,7 @@ const AboutThreeSection = () => {
 
                             <div className="mil-illustration mil-up mil-mb-90">
                                 <div className="mil-image-frame">
-                                    <img src={Data.image.url} alt={Data.image.alt} className="mil-scale" data-value-1="1" data-value-2="1.3" />
+                                    <Image src={Data.image.url} alt={Data.image.alt} className="mil-scale" data-value-1="1" data-value-2="1.3" />
                                 </div>
                             </div>
 

@@ -2,7 +2,7 @@
 
 import { SliderProps } from "@common/sliderProps";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import Image from "next/image";
 import Data from '@data/sliders/partners';
 
 const PartnersSlider = ( { bgStyle } ) => {
@@ -11,7 +11,7 @@ const PartnersSlider = ( { bgStyle } ) => {
     {/* partners */}
     <div className={`mil-${bgStyle}-bg mil-partners mil-relative`}>
         {bgStyle == "soft" &&
-        <img src="/img/other/bg.svg" className="mil-bg-img" alt="image" />
+        <Image src="/img/other/bg.svg" className="mil-bg-img" alt="image" />
         }
         
         <div className="container mil-p-120-120">
@@ -23,7 +23,7 @@ const PartnersSlider = ( { bgStyle } ) => {
             >
                 {Data.items.map((item, key) => (
                 <SwiperSlide className="swiper-slide" key={`partners-slider-item-${key}`}>
-                    <a href={item.link} target="_blank" className="mil-partner-frame" style={{"width": "60px"}}><img src={item.image} alt={item.alt} /></a>
+                    <a href={item.link} target="_blank" className="mil-partner-frame" style={{"width": "60px"}}><Image src={item.image} alt={item.alt} /></a>
                 </SwiperSlide>
                 ))}
             </Swiper>

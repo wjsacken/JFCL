@@ -2,7 +2,7 @@
 
 import { SliderProps } from "@common/sliderProps";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import Image from "next/image";
 import Data from "@data/sliders/hero-2.json";
 import Link from "next/link";
 
@@ -24,7 +24,7 @@ const HeroTwoSlider = () => {
             >
                 {Data.items.map((item, key) => (
                 <SwiperSlide className="swiper-slide" key={`hero-two-slider-item-${key}`}>
-                    <img src={item.image} className="mil-bg-img" alt={item.alt} data-swiper-parallax-x="300" data-swiper-parallax-scale="1.3" />
+                    <Image src={item.image} className="mil-bg-img" alt={item.alt} data-swiper-parallax-x="300" data-swiper-parallax-scale="1.3" />
                     <div className="mil-overlay" />
                     <div className="container">
                         <div className="mil-background-grid mil-top-space" />
@@ -35,7 +35,7 @@ const HeroTwoSlider = () => {
                                 <h1 className="mil-upper mil-light mil-mb-60" dangerouslySetInnerHTML={{__html : item.title}} />
                                 <Link href={item.link} className="mil-link mil-light mil-upper">
                                     View A Project 
-                                    <span className="mil-arrow"><img src="img/icons/1.svg" alt="arrow" /></span>
+                                    <span className="mil-arrow"><Image src="img/icons/1.svg" alt="arrow" /></span>
                                 </Link>
                             </div>
 

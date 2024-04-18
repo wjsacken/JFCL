@@ -1,6 +1,7 @@
 import Data from "@data/sections/latest-posts.json";
 import Date from '@library/date';
 import Link from "next/link";
+import Image from "next/image";
 
 const LatestPostsSection = ( { posts, paddingTop } ) => {
     
@@ -19,7 +20,7 @@ const LatestPostsSection = ( { posts, paddingTop } ) => {
                                 <h2 className="mil-upper mil-up mil-mb-30" dangerouslySetInnerHTML={{__html : Data.title}} />
                                 <a href={Data.button.link} className="mil-link mil-upper mil-up">
                                     {Data.button.label} 
-                                    <span className="mil-arrow"><img src="/img/icons/1.svg" alt="arrow" /></span>
+                                    <span className="mil-arrow"><Image src="/img/icons/1.svg" alt="arrow" /></span>
                                 </a>
                             </div>
 
@@ -29,7 +30,7 @@ const LatestPostsSection = ( { posts, paddingTop } ) => {
 
                             <Link href={`/blog/${item.id}`} className="mil-blog-card mil-mb-60">
                                 <div className="mil-cover mil-up mil-long">
-                                    <img src={item.image} alt={item.title} />
+                                    <Image src={item.image} alt={item.title} />
                                     <div className="mil-date"><Date dateString={item.date} /></div>
                                 </div>
                                 <div className="mil-description">

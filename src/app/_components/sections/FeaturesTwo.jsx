@@ -1,11 +1,12 @@
 import Data from "@data/sections/features-2.json";
+import Image from "next/image";
 
 const FeaturesTwoSection = () => {
   return (
     <>
         {/* features two */}
         <section className="mil-soft-bg mil-relative">
-            <img src="/img/other/bg.svg" className="mil-bg-img" alt="image" />
+            <Image src="/img/other/bg.svg" className="mil-bg-img" alt="image" />
 
             <div className="container mil-p-120-60">
                 <div className="mil-background-grid mil-softened" />
@@ -20,7 +21,7 @@ const FeaturesTwoSection = () => {
                             <p className="mil-shortened mil-up mil-mb-30" dangerouslySetInnerHTML={{__html : item.text}} />
                             <ul className="mil-icon-list mil-mb-60">
                                 {item.list.map((list_item, list_key) => (
-                                <li className="mil-up" key={`features-two-item-${key}-list-${list_key}`}><img src="/img/icons/11.svg" alt="icon" />{list_item}</li>
+                                <li className="mil-up" key={`features-two-item-${key}-list-${list_key}`}><Image src="/img/icons/11.svg" alt="icon" />{list_item}</li>
                                 ))}
                             </ul>
                         </div>

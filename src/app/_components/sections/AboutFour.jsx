@@ -1,4 +1,5 @@
 import Data from "@data/sections/about-4.json";
+import Image from "next/image";
 
 const AboutFourSection = () => {
     return (
@@ -18,7 +19,7 @@ const AboutFourSection = () => {
 
                                 <ul className="mil-icon-list mil-mb-60">
                                     {Data.items.map((item, key) => (
-                                    <li className="mil-up" key={`about-four-list-item-${key}`}><img src="/img/icons/11.svg" alt="icon" />{item}</li>
+                                    <li className="mil-up" key={`about-four-list-item-${key}`}><Image src="/img/icons/11.svg" alt="icon" />{item}</li>
                                     ))}
                                 </ul>
 
@@ -29,11 +30,11 @@ const AboutFourSection = () => {
 
                             <div className="mil-illustration mil-up mil-mb-90">
                                 <div className="mil-image-frame">
-                                    <img src={Data.image.url} alt={Data.image.alt} className="mil-scale" data-value-1="1" data-value-2="1.3" />
+                                    <Image src={Data.image.url} alt={Data.image.alt} className="mil-scale" data-value-1="1" data-value-2="1.3" />
                                 </div>
                                 <div className="mil-about-counter mil-center">
                                     <div className="mil-avatar mil-mb-30">
-                                        <img src={Data.avatar.image} alt={Data.image.name} />
+                                        <Image src={Data.avatar.image} alt={Data.image.name} />
                                     </div>
                                     <h5 className="mil-upper mil-mb-10">{Data.avatar.name}</h5>
                                     <p className="mil-text-sm mil-dark-soft">{Data.avatar.subname}</p>

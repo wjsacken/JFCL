@@ -1,4 +1,5 @@
 import Data from "@data/sections/advantages.json";
+import Image from "next/image";
 
 const AdvantagesSection = () => {
   return (
@@ -24,7 +25,7 @@ const AdvantagesSection = () => {
                         <div className="mil-advantage mil-icon-box mil-center mil-up mil-mb-60">
                             <h4 className="mil-upper mil-mb-30">{item.title}</h4>
                             <div className="mil-icon mil-icon-border mil-mb-30">
-                                <img src="/img/icons/6.svg" alt="icon" />
+                                <Image src="/img/icons/6.svg" alt="icon" />
                             </div>
                             <p>{item.text}</p>
                         </div>

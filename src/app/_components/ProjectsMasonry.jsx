@@ -3,6 +3,7 @@
 import Isotope from "isotope-layout";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const ProjectsMasonry = ({ projects, categories }) => {
     // Isotope
@@ -64,7 +65,7 @@ const ProjectsMasonry = ({ projects, categories }) => {
                     <Link href={`${item.link}`} className={item.orientation == "vertical" ? "mil-portfolio-item-2 mil-long-item mil-mb-30" : "mil-portfolio-item-2 mil-square-item mil-mb-30"}>
                         <div className="mil-project-descr">
                             <h3 className="mil-upper mil-mb-30">{item.title}</h3>
-                            <div className="mil-link mil-upper">Read more <div className="mil-arrow mil-light"><img src="/img/icons/1.svg" alt="arrow" /></div></div>
+                            <div className="mil-link mil-upper">Read more <div className="mil-arrow mil-light"><Image src="/img/icons/1.svg" alt="arrow" /></div></div>
                         </div>
 
                         <div className="mil-category">{item.category}</div>

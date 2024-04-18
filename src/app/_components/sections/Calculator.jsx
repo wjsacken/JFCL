@@ -1,12 +1,13 @@
 import Data from "@data/sections/calculator.json";
 import Link from "next/link";
+import Image from "next/image";
 
 const CalculatorSection = () => {
     return (
         <>
             {/* calculator */}
             <section className="mil-soft-bg mil-relative">
-                <img src="/img/other/bg.svg" className="mil-bg-img" alt="image" />
+                <Image src="/img/other/bg.svg" className="mil-bg-img" alt="image" />
 
                 <div className="container mil-p-120-90">
                     <div className="mil-background-grid mil-softened" />

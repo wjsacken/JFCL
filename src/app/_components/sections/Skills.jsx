@@ -1,11 +1,12 @@
 import Data from "@data/sections/skills.json";
+import Image from "next/image";
 
 const SkillsSection = () => {
   return (
     <>
         {/* skills */}
         <section className="mil-soft-bg mil-relative">
-            <img src="/img/other/bg.svg" className="mil-bg-img" alt="image" />
+            <Image src="/img/other/bg.svg" className="mil-bg-img" alt="image" />
 
             <div className="container mil-p-120-30">
                 <div className="mil-background-grid mil-softened" />

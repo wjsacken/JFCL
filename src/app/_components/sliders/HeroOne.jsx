@@ -2,7 +2,7 @@
 
 import { SliderProps } from "@common/sliderProps";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import Image from "next/image";
 import Data from "@data/sliders/hero-1.json";
 import Link from "next/link";
 
@@ -26,7 +26,7 @@ const HeroOneSlider = () => {
             >
                 {Data.items.map((item, key) => (
                 <SwiperSlide className="swiper-slide" key={`hero-one-slider-item-${key}`}>
-                    <img src={item.image} className="mil-bg-img" alt={item.alt} style={{"objectPosition": "top"}} data-swiper-parallax-x="300" data-swiper-parallax-scale="1.3" />
+                    <Image src={item.image} className="mil-bg-img" alt={item.alt} style={{"objectPosition": "top"}} data-swiper-parallax-x="300" data-swiper-parallax-scale="1.3" />
                 </SwiperSlide>
                 ))}
             </Swiper>
@@ -45,7 +45,7 @@ const HeroOneSlider = () => {
                                 <h1 className="mil-upper mil-light mil-mb-60" dangerouslySetInnerHTML={{__html : Data.title}} />
                                 <Link href={Data.button.link} className="mil-link mil-light mil-upper">
                                     {Data.button.label} 
-                                    <span className="mil-arrow"><img src="/img/icons/1.svg" alt="arrow" /></span>
+                                    <span className="mil-arrow"><Image src="/img/icons/1.svg" alt="arrow" /></span>
                                 </Link>
                             </div>
 

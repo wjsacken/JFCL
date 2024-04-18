@@ -1,4 +1,5 @@
 import Data from "@data/sections/features.json";
+import Image from "next/image";
 
 const FeaturesSection = () => {
   return (
@@ -14,7 +15,7 @@ const FeaturesSection = () => {
 
                         <div className="mil-icon-box mil-up mil-mb-60">
                             <div className="mil-icon mil-icon-border mil-mb-30">
-                                <img src={item.image} alt={item.title} />
+                                <Image src={item.image} alt={item.title} />
                             </div>
                             <h4 className="mil-upper mil-mb-30">{item.title}</h4>
                             <p>{item.text}</p>

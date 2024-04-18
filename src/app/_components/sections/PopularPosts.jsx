@@ -1,6 +1,7 @@
 import Data from "@data/sections/popular-posts.json";
 import Date from '@library/date';
 import Link from "next/link";
+import Image from "next/image";
 
 const PopularPostsSection = ( { posts } ) => {
     
@@ -10,7 +11,7 @@ const PopularPostsSection = ( { posts } ) => {
             {posts.slice(0, Data.numOfItems).map((item, key) => (
             <Link href={`/news/${item.id}`} key={`blog-popular-${key}`} className="mil-blog-card mil-lg-card mil-mb-60">
                 <div className="mil-cover mil-long mil-up">
-                    <img src={item.image} alt={item.title} />
+                    <Image src={item.image} alt={item.title} />
                     <div className="mil-date"><Date dateString={item.date} /></div>
                 </div>
                 <div className="mil-description">
@@ -20,7 +21,7 @@ const PopularPostsSection = ( { posts } ) => {
                     </div>
                     <div className="mil-right-side mil-mt-suptitle-offset">
                         <p className="mil-up mil-mb-30">{item.short}</p>
-                        <span className="mil-link mil-upper mil-up">Read <span className="mil-arrow"><img src="/img/icons/1.svg" alt="arrow" /></span></span>
+                        <span className="mil-link mil-upper mil-up">Read <span className="mil-arrow"><Image src="/img/icons/1.svg" alt="arrow" /></span></span>
                     </div>
                 </div>
             </Link>

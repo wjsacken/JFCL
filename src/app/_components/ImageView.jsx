@@ -1,5 +1,6 @@
 import { Fragment, useEffect, useState } from "react";
 import useClickOutside from "@common/useClickOutside";
+import Image from "next/image";
 
 const ImgViews = ({ close, src }) => {
   let domNode = useClickOutside(() => {
@@ -18,7 +19,7 @@ const ImgViews = ({ close, src }) => {
         >
           <div className="mfp-content" ref={domNode}>
             <div className="mfp-iframe-scaler">
-              <img className="mfp-img" src={src} />
+              <Image className="mfp-img" src={src} />
             </div>
           </div>
           <div className="mfp-preloader">Loading...</div>
@@ -50,7 +51,7 @@ const ImageView = () => {
   }, []);
   return (
     <Fragment>
-      {img && <ImgViews close={() => setImg(false)} src={imgValue} />}
+      {img && <ImageViews close={() => setImg(false)} src={imgValue} />}
     </Fragment>
   );
 };

@@ -1,12 +1,13 @@
 import Data from "@data/sections/counters.json";
 import Link from "next/link";
+import Image from "next/image";
 
 const CountersSection = () => {
   return (
     <>
         {/* counters */}
         <section className="mil-dark-bg mil-relative mil-o-hidden">
-            <img src={Data.bg_image} className="mil-bg-img mil-scale" alt="image" data-value-1="1" data-value-2="1.4" />
+            <Image src={Data.bg_image} className="mil-bg-img mil-scale" alt="image" data-value-1="1" data-value-2="1.4" />
 
             <div className="mil-overlay" />
             
@@ -22,7 +23,7 @@ const CountersSection = () => {
                             
                             <Link href={Data.button.link} className="mil-link mil-light mil-upper mil-up">
                                 {Data.button.label} 
-                                <span className="mil-arrow"><img src="/img/icons/1.svg" alt="arrow" /></span>
+                                <span className="mil-arrow"><Image src="/img/icons/1.svg" alt="arrow" /></span>
                             </Link>
                         </div>
 

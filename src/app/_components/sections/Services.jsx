@@ -1,12 +1,13 @@
 import Data from "@data/sections/services.json";
 import Link from "next/link";
+import Image from "next/image";
 
 const ServicesSection = () => {
   return (
     <>
         {/* services */}
         <section className="mil-soft-bg mil-relative">
-            <img src="/img/other/bg.svg" className="mil-bg-img" alt="image" />
+            <Image src="/img/other/bg.svg" className="mil-bg-img" alt="image" />
             
             <div className="container mil-p-120-90">
                 <div className="mil-background-grid mil-softened" />
@@ -28,13 +29,13 @@ const ServicesSection = () => {
                             <div className="mil-card-number">{item.num}</div>
                             <div className="mil-center">
                                 <div className="mil-icon mil-icon-lg mil-mb-30">
-                                    <img src={item.icon} alt={item.title} />
+                                    <Image src={item.icon} alt={item.title} />
                                 </div>
                                 <h4 className="mil-upper mil-mb-20">{item.title}</h4>
                                 <div className="mil-divider-sm mil-mb-20" />
                                 <p className="mil-service-text">{item.text}</p>
                                 <div className="mil-go-buton mil-icon mil-icon-lg mil-icon-accent-bg">
-                                    <img src="/img/icons/1.svg" alt="icon" />
+                                    <Image src="/img/icons/1.svg" alt="icon" />
                                 </div>
                             </div>
                         </Link>

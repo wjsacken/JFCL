@@ -3,6 +3,7 @@
 import Isotope from "isotope-layout";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const TeamMasonry = ({ team, categories }) => {
     // Isotope
@@ -66,7 +67,7 @@ const TeamMasonry = ({ team, categories }) => {
       <div className={`col-sm-6 col-lg-3 mil-grid-item mil-up ${item.category_slug}`} key={`team-item-${key}`}>
         <Link href={`/team/${item.id}`} className="mil-team-member">
           <div className="mil-avatar mil-mb-30">
-            <img src={item.image} alt={item.name} />
+            <Image src={item.image} alt={item.name} />
           </div>
           <h6 className="mil-upper mil-mb-10">{item.name}</h6>
           <p className="mil-dark-soft">{item.role}</p>

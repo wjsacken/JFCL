@@ -1,12 +1,13 @@
 import Data from "@data/sections/call-to-action-2.json";
 import Link from "next/link";
+import Image from "next/image";
 
 const CallToActionTwoSection = ( { bg } ) => {
   return (
     <>
         {/* call to action two */}
         <section className="mil-dark-bg mil-relative mil-o-hidden">
-            <img src={Data.bg_image} className="mil-bg-img mil-scale" alt="image" style={{"objectPosition": "top"}} data-value-1="1" data-value-2="1.2" />
+            <Image src={Data.bg_image} className="mil-bg-img mil-scale" alt="image" style={{"objectPosition": "top"}} data-value-1="1" data-value-2="1.2" />
 
             <div className="mil-overlay" />
             

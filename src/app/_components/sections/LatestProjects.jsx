@@ -1,5 +1,6 @@
 import Data from "@data/sections/latest-projects.json";
 import Link from "next/link";
+import Image from "next/image";
 
 const LatestProjectsSection = ( { projects } ) => {
     const projectRows0 = [];
@@ -34,7 +35,7 @@ const LatestProjectsSection = ( { projects } ) => {
                         <div className="col-md-6 col-lg-3" key={`projects-row-${row_key}`}>
                             {row.map((item, key) => (
                             <Link href={`/projects/${item.id}`} key={`projects-item-${key}`} className={row.length == 2 ? "mil-portfolio-item mil-square-item mil-up mil-mb-30" : "mil-portfolio-item mil-long-item mil-up mil-mb-30"}>
-                                <img src={item.image} alt={item.title} />
+                                <Image src={item.image} alt={item.title} />
                                 <div className="mil-project-descr">
                                     <h4 className="mil-upper mil-mb-20">{item.title}</h4>
                                     <div className="mil-divider-sm mil-mb-20"></div>

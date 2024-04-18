@@ -1,6 +1,6 @@
 
 import React, { Suspense } from "react";
-
+import Image from "next/image";
 import { notFound } from 'next/navigation';
 
 import { getAllTeamIds, getTeamData } from "@library/team";
@@ -24,7 +24,7 @@ async function TeamDetail( { params } ) {
             <div className="mil-team-member-frame">
                 <div className="mil-left-side">
                     <div className="mil-member-portrait">
-                        <img src={postData.fullImage} alt={postData.name} />
+                        <Image src={postData.fullImage} alt={postData.name} />
                     </div>
                 </div>
                 <div className="mil-right-side">

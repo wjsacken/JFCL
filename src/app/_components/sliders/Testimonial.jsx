@@ -2,7 +2,7 @@
 
 import { SliderProps } from "@common/sliderProps";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import Image from "next/image";
 import Data from '@data/sliders/testimonial';
 import Data2 from '@data/sliders/partners';
 
@@ -18,7 +18,7 @@ const TestimonialSlider = ( { showPartners = 1 } ) => {
     <>
       {/* reviews */}
       <section className="mil-soft-bg mil-relative">
-          <img src="/img/other/bg.svg" className="mil-bg-img" alt="image" />
+          <Image src="/img/other/bg.svg" className="mil-bg-img" alt="background" />
 
           <div className="container mil-p-120-120">
 
@@ -44,10 +44,10 @@ const TestimonialSlider = ( { showPartners = 1 } ) => {
                                   <div className="mil-reviev-head mil-up">
                                       <div className="mil-left">
                                           <div className="mil-quote">
-                                              <img src="/img/icons/12.svg" alt="icon" />
+                                              <Image src="/img/icons/12.svg" alt="icon" />
                                           </div>
                                           <div className="mil-review-avatar">
-                                              <img src={item.image} alt={item.name} />
+                                              <Image src={item.image} alt={item.name} />
                                           </div>
                                       </div>
                                       <div className="mil-name">
@@ -81,7 +81,7 @@ const TestimonialSlider = ( { showPartners = 1 } ) => {
                           >
                                   {Data2.items.map((item, key) => (
                                   <SwiperSlide className="swiper-slide" key={`partners-slider-item-${key}`}>
-                                    <a href={item.link} target="_blank" className="mil-partner-frame"><img src={item.image} alt={item.alt} /></a>
+                                    <a href={item.link} target="_blank" className="mil-partner-frame"><Image src={item.image} alt={item.alt} /></a>
                                   </SwiperSlide>
                                   ))}
                           </Swiper>

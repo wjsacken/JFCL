@@ -2,7 +2,7 @@
 
 import { SliderProps } from "@common/sliderProps";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import Image from "next/image";
 import Data from '@data/sliders/company-2';
 
 import Link from "next/link";
@@ -25,7 +25,7 @@ const CompanySlider = () => {
                         <div className="mil-up">
                             <Link href={Data.button.link} className="mil-link mil-upper">
                                 {Data.button.label}
-                                <span className="mil-arrow"><img src="/img/icons/1.svg" alt="arrow" /></span>
+                                <span className="mil-arrow"><Image src="/img/icons/1.svg" alt="arrow" /></span>
                             </Link>
                         </div>
                     </div>
@@ -42,7 +42,7 @@ const CompanySlider = () => {
                                 <SwiperSlide className="swiper-slide" key={`illustration-slider-item-${key}`}>
                                     <div className="mil-illustration" data-swiper-parallax-x="50" data-swiper-parallax-scale="1.3">
                                         <div className="mil-image-frame">
-                                            <img src={item.image} alt={item.alt} />
+                                            <Image src={item.image} alt={item.alt} />
                                         </div>
                                     </div>
                                 </SwiperSlide>

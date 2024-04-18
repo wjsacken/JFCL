@@ -3,6 +3,7 @@
 import { useCallback, useState } from "react";
 import { useSearchParams } from 'next/navigation'
 import { useRouter } from 'next/navigation'
+import Image from "next/image";
 
 const SearchBarModule = () => {
     const router = useRouter()
@@ -41,7 +42,7 @@ const SearchBarModule = () => {
                     router.push("/search" + '?' + createQueryString('key', search))
                 }}
             >
-                <img src="/img/icons/13.svg" alt="search" />
+                <Image src="/img/icons/13.svg" alt="search" />
             </button>
         </div>
     )
