@@ -48,7 +48,7 @@ const DefaultFooter = () => {
                 <p className="mil-light-soft mil-mb-15">{AppData.footer.copy}</p>
                 <ul className="mil-light-soft mil-mb-15">
                     {AppData.footer.menu.map((item, index) => (
-                    <li key={`menu-item-${item}`}<a href={item.link}>{item.label}</a></li>
+                    <li key={`menu-item-${item}`} ><a href={item.link}>{item.label}</a></li>
                     ))}
                 </ul>
             </div>
