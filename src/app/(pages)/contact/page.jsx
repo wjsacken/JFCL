@@ -31,18 +31,18 @@ const Contact = () => {
                             <div className="mil-divider-lg mil-up mil-mb-30"></div>
                             <h3 className="mil-up mil-mb-10">Wallace & Graham</h3>
                             <a href="tel:800-849-5291" className="mil-mb-30">
-                                <Image src="/img/icons/phone-call1.svg" width="20" style={{top:"5px", position:"relative"}}></img> 800-849-5291
+                                <Image src="/img/icons/phone-call1.svg" width="20" style={{top:"5px", position:"relative"}}></Image> 800-849-5291
                             </a>
                             <br/>
                             <a href="mailto:JusticeForCampLejeune@wallacegraham.com">
-                                <Image src="/img/icons/mail.svg" style={{top:"5px", position:"relative"}}></img> Email
+                                <Image src="/img/icons/mail.svg" style={{top:"5px", position:"relative"}}></Image> Email
                             </a>
                             <h3 className="mil-up mt-xxl-4 mil-mb-10">Rhine Law Firm</h3>
                             <a href="tel:866-772-996" className="mil-mb-30">
-                                <Image src="/img/icons/phone-call1.svg" width="20"></img> 866-772-9960
+                                <Image src="/img/icons/phone-call1.svg" width="20"></Image> 866-772-9960
                             </a><br/>
                             <a href="mailto:attorneys@rhinelawfirm.com">
-                                <Image src="/img/icons/mail.svg" style={{top:"5px", position:"relative"}}></img> Email
+                                <Image src="/img/icons/mail.svg" style={{top:"5px", position:"relative"}}></Image> Email
                             </a>
                             
                         </div>
