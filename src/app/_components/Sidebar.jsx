@@ -2,7 +2,7 @@ import { Suspense } from "react";
 
 import Link from "next/link";
 import Date from '@library/date';
-
+import Image from "next/image";
 import SearchBarModule from '@components/SearchBar';
 
 import { getSortedPostsData } from "@library/posts";
@@ -39,7 +39,7 @@ async function Sidebar() {
             <ul className="mil-list mil-dark mil-mb-30">
                 {authors.map((item, key) => (
                 <li className="mil-text-sm mil-up mil-mb-10" key={`sidebar-author-item-${key}`}>
-                    <Link href={`/blog/author/${item.id}`}><img src={item.avatar} alt={item.title} className="mil-pub-author" />
+                    <Link href={`/blog/author/${item.id}`}><Image src={item.avatar} alt={item.title} className="mil-pub-author" />
                     </Link>
                 </li>
                 ))}
