@@ -51,7 +51,7 @@ const ImageView = () => {
   }, []);
   return (
     <Fragment>
-      {img && <ImageViews close={() => setImg(false)} src={imgValue} />}
+      {img && <ImageView close={() => setImg(false)} src={imgValue} />}
     </Fragment>
   );
 };
