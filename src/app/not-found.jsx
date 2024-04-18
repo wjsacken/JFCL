@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Header from "@layouts/headers/Index";
-
+import Image from "next/image";
 const NotFound = () => {
   return (
     <>
@@ -11,7 +11,7 @@ const NotFound = () => {
 
         {/* 404 */}
         <section className="mil-banner mil-relative">
-            <img src="/img/photo/16.jpg" className="mil-bg-img mil-scale" data-value-1=".4" data-value-2="1.4" alt="image" />
+            <Image src="/img/photo/16.jpg" className="mil-bg-img mil-scale" data-value-1=".4" data-value-2="1.4" alt="image" />
             
             <div className="mil-overlay" />
             

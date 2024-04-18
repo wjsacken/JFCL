@@ -2,7 +2,7 @@
 
 import { SliderProps } from "@common/sliderProps";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import Image from "next/image";
 import Data from '@data/sliders/recent-projects';
 import Link from "next/link";
 
@@ -27,7 +27,7 @@ const RecentProjectsSlider = () => {
 
                                 <div className="mil-avatar-frame mil-up mil-mb-30">
                                     <div className="mil-avatar mil-mb-30">
-                                        <img src={Data.avatar.image} alt={Data.avatar.name} />
+                                        <Image src={Data.avatar.image} alt={Data.avatar.name} />
                                     </div>
                                     <h5 className="mil-upper mil-mb-10">{Data.avatar.name}</h5>
                                     <p className="mil-text-sm mil-dark-soft">{Data.avatar.subname}</p>
@@ -38,7 +38,7 @@ const RecentProjectsSlider = () => {
 
                                 <ul className="mil-icon-list mil-mb-30">
                                     {Data.links.map((item, key) => (
-                                    <li key={`recent-projects-links-item-${key}`} className="mil-hover mil-up"><Link href={item.link}><img src="/img/icons/11.svg" alt="icon" />{item.title}</Link></li>
+                                    <li key={`recent-projects-links-item-${key}`} className="mil-hover mil-up"><Link href={item.link}><Image src="/img/icons/11.svg" alt="icon" />{item.title}</Link></li>
                                     ))}
                                 </ul>
 
@@ -58,7 +58,7 @@ const RecentProjectsSlider = () => {
                                 <SwiperSlide className="swiper-slide" key={`illustration-slider-item-${key}`}>
                                     <div className="mil-illustration" data-swiper-parallax-x="50" data-swiper-parallax-scale="1.3">
                                         <div className="mil-image-frame">
-                                            <img src={item.image} alt={item.alt} />
+                                            <Image src={item.image} alt={item.alt} />
                                         </div>
                                     </div>
                                 </SwiperSlide>

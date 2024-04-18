@@ -4,7 +4,7 @@ import Link from "next/link";
 import AppData from "@data/app.json";
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
-
+import Image from "next/image";
 const DefaultHeader = () => {
   const [toggle, setToggle] = useState(false);
   const [activeSubMenu, setActiveSubMenu] = useState(null);
@@ -31,8 +31,8 @@ const DefaultHeader = () => {
             <div className="container-fluid">
                 <div className="mil-top-panel-content">
                     <Link href="/" className="mil-logo">
-                        <img className="wgLogo" src={AppData.header.logo.image} alt={AppData.header.logo.alt} style={{ width: "300px", marginRight: "2rem" }} />
-                        <img className="rhineLogo" src={AppData.footer.logo.image} alt={AppData.footer.logo.alt} style={{width: "100px", marginRight: "1rem"}} />
+                        <Image className="wgLogo" src={AppData.header.logo.image} alt={AppData.header.logo.alt} style={{ width: "300px", marginRight: "2rem" }} />
+                        <Image className="rhineLogo" src={AppData.footer.logo.image} alt={AppData.footer.logo.alt} style={{width: "100px", marginRight: "1rem"}} />
                     </Link>
                     <div className={`mil-navigation ${toggle ? "mil-active" : ""}`}>
                         <nav>
