@@ -2,9 +2,6 @@ import { Suspense } from "react";
 import Link from "next/link";
 import Date from '@library/date';
 import Image from "next/image";
-
-import SearchBarModule from '@components/SearchBar';
-
 import { getSortedPostsData } from "@library/articles";
 import { getSortedAuthorsData } from "@library/authors";
 
@@ -16,11 +13,6 @@ async function Sidebar() {
     <>
         {/* sidebar */}
         <div className="mil-sidebar-frame">
-
-            <Suspense fallback={<div>Loading...</div>}>
-                <SearchBarModule />
-            </Suspense>
-            
             <div className="mil-divider-lg mil-up mil-mb-30"></div>
 
             <h6 className="mil-upper mil-up mil-mb-30">Recent Posts</h6>
