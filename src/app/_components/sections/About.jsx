@@ -27,7 +27,7 @@ const AboutSection = () => {
                                 <p className="mil-up mil-mb-40" dangerouslySetInnerHTML={{__html : Data.description}} />
                                 <a onClick={() => setOpen(true)} className="mil-link mil-upper mil-up has-popup-video" style={{ "cursor" : "pointer" }}>
                                     {Data.button.label} 
-                                    <span className="mil-arrow"><Image src="/img/icons/2.svg" alt="arrow" /></span>
+                                    <span className="mil-arrow"><Image src="/img/icons/2.svg" width="20" height="20" alt="arrow" /></span>
                                 </a>
                             </div>
 
@@ -36,7 +36,7 @@ const AboutSection = () => {
 
                             <div className="mil-illustration mil-up mil-mb-90">
                                 <div className="mil-image-frame">
-                                    <Image src={Data.image.url} alt={Data.image.alt} className="mil-scale" data-value-1="1" data-value-2="1.3" />
+                                    <Image src={Data.image.url} alt={Data.image.alt} width="605" height="605" className="mil-scale" data-value-1="1" data-value-2="1.3" />
                                 </div>
                                 
                             </div>

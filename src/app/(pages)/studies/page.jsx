@@ -5,7 +5,7 @@ const ProjectsMasonry = dynamic( () => import("@components/ProjectsMasonry"), { 
 import { getSortedProjectsData } from "@library/projects";
 
 import PageBanner from "@components/PageBanner";
-export const runtime = 'edge';
+
 export const metadata = {
   title: {
 		default: "About",
@@ -17,7 +17,7 @@ async function About() {
     const projects = await getAllProjects();
   return (
     <>
-      <PageBanner pageTitle={"Studies"} breadTitle={"About"} bgImage={"/img/photo/12.jpg"} />
+      <PageBanner width="1300" height="300"  pageTitle={"Studies"} breadTitle={"About"} bgImage={"/img/photo/16.jpg"} />
       <section>
           <div className="container mil-p-120-60">
               <div className="row justify-content-between">

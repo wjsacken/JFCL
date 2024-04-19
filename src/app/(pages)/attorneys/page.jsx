@@ -3,7 +3,6 @@ import dynamic from "next/dynamic";
 import AppData from "@data/app.json";
 import { getSortedTeamData } from "@library/team";
 import PageBanner from "@components/PageBanner";
-export const runtime = 'edge';
 const TeamMasonry = dynamic( () => import("@components/TeamMasonry"), { ssr: false } );
 export const metadata = {
   title: {

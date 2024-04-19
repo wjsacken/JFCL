@@ -11,7 +11,7 @@ const PartnersSlider = ( { bgStyle } ) => {
     {/* partners */}
     <div className={`mil-${bgStyle}-bg mil-partners mil-relative`}>
         {bgStyle == "soft" &&
-        <Image src="/img/other/bg.svg" className="mil-bg-img" alt="image" />
+        <Image src="/img/photo/16.svg" width="1300" height="300"  className="mil-bg-img" alt="image" />
         }
         
         <div className="container mil-p-120-120">

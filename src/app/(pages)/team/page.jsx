@@ -7,7 +7,7 @@ import { getSortedTeamData } from "@library/team";
 
 import PageBanner from "@components/PageBanner";
 import RecruitSection from "@components/sections/Recruit";
-export const runtime = 'edge';
+
 const TeamMasonry = dynamic( () => import("@components/TeamMasonry"), { ssr: false } );
 
 export const metadata = {
@@ -22,7 +22,7 @@ async function Team() {
   
   return (
     <>
-      <PageBanner pageTitle={"Attorneys"} bgImage={"/img/photo/12.jpg"} />
+      <PageBanner width="1300" height="300" pageTitle={"Attorneys"} bgImage={"/img/photo/12.jpg"} />
          
       {/* team */}
       <section>

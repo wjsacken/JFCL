@@ -1,7 +1,7 @@
 import React from "react";
 import AppData from "@data/app.json";
 import PageBanner from "@components/PageBanner";
-export const runtime = 'edge';
+
 
 export const metadata = {
   title: {
@@ -13,7 +13,7 @@ export const metadata = {
 const About = () => {
   return (
     <>
-      <PageBanner pageTitle={"About us"} breadTitle={"About"} bgImage={"/img/photo/12.jpg"} />
+      <PageBanner width="1300" height="300" pageTitle={"About us"} breadTitle={"About"} bgImage={"/img/photo/12.jpg"} />
       <section>
           <div className="container mil-p-120-60">
               <div className="row justify-content-between">

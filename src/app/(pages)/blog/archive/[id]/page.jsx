@@ -9,7 +9,7 @@ import { notFound } from 'next/navigation';
 import { getSortedCategoriesData } from "@library/categories";
 import { getAllArchivesIds, getArchiveData } from "@library/archives";
 import { getArchivePosts } from "@library/posts";
-export const runtime = 'edge';
+
 export async function generateMetadata({ params }) {
   const archiveData = await getSingleArchiveData(params);
   
@@ -26,7 +26,7 @@ async function BlogArchive( { params } ) {
   return (
     <>
       
-      <PageBanner pageTitle={"Archive: "+archiveData.month+', '+archiveData.year} breadTitle={archiveData.month+', '+archiveData.year} bgImage={"/img/photo/12.jpg"} />
+      <PageBanner width="1300" height="300"  pageTitle={"Archive: "+archiveData.month+', '+archiveData.year} breadTitle={archiveData.month+', '+archiveData.year} bgImage={"/img/photo/12.jpg"} />
       
       {/* blog */}
       <section>

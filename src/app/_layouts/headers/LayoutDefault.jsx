@@ -31,8 +31,8 @@ const DefaultHeader = () => {
             <div className="container-fluid">
                 <div className="mil-top-panel-content">
                     <Link href="/" className="mil-logo">
-                        <Image className="wgLogo" src={AppData.header.logo.image} alt={AppData.header.logo.alt} style={{ width: "300px", marginRight: "2rem" }} />
-                        <Image className="rhineLogo" src={AppData.footer.logo.image} alt={AppData.footer.logo.alt} style={{width: "100px", marginRight: "1rem"}} />
+                        <Image className="wgLogo" src={AppData.header.logo.image} alt={AppData.header.logo.alt} width="300" height="48" style={{ width: "300px", marginRight: "2rem" }} />
+                        <Image className="rhineLogo" src={AppData.footer.logo.image} alt={AppData.footer.logo.alt} width="100" height="64" style={{width: "100px", marginRight: "1rem"}} />
                     </Link>
                     <div className={`mil-navigation ${toggle ? "mil-active" : ""}`}>
                         <nav>

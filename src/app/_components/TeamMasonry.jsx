@@ -67,7 +67,7 @@ const TeamMasonry = ({ team, categories }) => {
       <div className={`col-sm-6 col-lg-3 mil-grid-item mil-up ${item.category_slug}`} key={`team-item-${key}`}>
         <Link href={`/team/${item.id}`} className="mil-team-member">
           <div className="mil-avatar mil-mb-30">
-            <Image src={item.image} alt={item.name} />
+            <Image width="200" height="250" src={item.image} alt={item.name} />
           </div>
           <h6 className="mil-upper mil-mb-10">{item.name}</h6>
           <p className="mil-dark-soft">{item.role}</p>

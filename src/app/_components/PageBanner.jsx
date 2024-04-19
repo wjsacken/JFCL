@@ -28,9 +28,9 @@ const PageBanner = ({ pageTitle, breadTitle, bgImage }) => {
     <>    
       {/* banner */}
       <section className="mil-banner mil-banner-sm">
-          <Image src={bgImage} className="mil-bg-img mil-scale" data-value-1=".4" data-value-2="1.4" alt="image" style={{"objectPosition": "top"}} />
+          <Image src="/img/photo/16.jpg" className="mil-bg-img mil-scale" data-value-1=".4" data-value-2="1.4" width="1300" height="300" alt="image" style={{"objectPosition": "top"}} />
 
-          <div className="mil-overlay" />
+          <div className="mil-overlay-interior" />
 
           <div className="container">
               <div className="mil-background-grid mil-top-space" />

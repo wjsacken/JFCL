@@ -18,7 +18,7 @@ const TestimonialSlider = ( { showPartners = 1 } ) => {
     <>
       {/* reviews */}
       <section className="mil-soft-bg mil-relative">
-          <Image src="/img/other/bg.svg" className="mil-bg-img" alt="background" />
+          <Image src="/img/other/bg.svg" width="1300" height="300"  className="mil-bg-img" alt="background" />
 
           <div className="container mil-p-120-120">
 

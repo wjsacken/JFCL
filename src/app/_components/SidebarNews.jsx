@@ -2,9 +2,6 @@ import { Suspense } from "react";
 import Link from "next/link";
 import Date from '@library/date';
 import Image from "next/image";
-
-import SearchBarModule from '@components/SearchBar';
-
 import { getSortedPostsData } from "@library/articles";
 import { getSortedAuthorsData } from "@library/authors";
 
@@ -16,11 +13,6 @@ async function Sidebar() {
     <>
         {/* sidebar */}
         <div className="mil-sidebar-frame">
-
-            <Suspense fallback={<div>Loading...</div>}>
-                <SearchBarModule />
-            </Suspense>
-            
             <div className="mil-divider-lg mil-up mil-mb-30"></div>
 
             <h6 className="mil-upper mil-up mil-mb-30">Recent Posts</h6>
@@ -39,7 +31,7 @@ async function Sidebar() {
             <ul className="mil-list mil-dark mil-mb-30">
                 {authors.map((item, key) => (
                 <li className="mil-text-sm mil-up mil-mb-10" key={`sidebar-author-item-${key}`}>
-                    <Link href={`/blog/author/${item.id}`}><Image src={item.avatar} alt={item.title} className="mil-pub-author" />
+                    <Link href={`/blog/author/${item.id}`}><Image width="300" height="60" src={item.avatar} alt={item.title} className="mil-pub-author" />
                     </Link>
                 </li>
                 ))}

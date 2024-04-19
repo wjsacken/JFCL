@@ -9,14 +9,14 @@ import { notFound } from 'next/navigation';
 
 import PageBannerTwo from "@components/PageBannerTwo";
 import Sidebar from "@components/Sidebar";
-export const runtime = 'edge';
+
 async function PostsDetail( { params } ) {
   const postData = await getSinglePostData(params);
   const authorData = await getSingleAuthorData(postData.author.toLowerCase().replace(' ', '-'));
 
   return (
     <>
-      <PageBannerTwo title={postData.introTitle} subTitle={postData.categories[0]} bgImage={postData.image} />
+      <PageBannerTwo width="1300" height="300"  title={postData.introTitle} subTitle={postData.categories[0]} bgImage={postData.image} />
       
       {/* blog */}
       <section>
@@ -28,7 +28,7 @@ async function PostsDetail( { params } ) {
 
                       <div className="mil-publication">
                           <ul className="mil-post-top mil-list mil-dark mil-mb-30">
-                              <li className="mil-text-sm mil-up mil-mb-10"><Image width="200" src={authorData.avatar} alt={postData.author} className="mil-pub-author" /></li>
+                              <li className="mil-text-sm mil-up mil-mb-10"><Image width="300" height="60" src={authorData.avatar} alt={postData.author} className="mil-pub-author" /></li>
                               <li className="mil-text-sm mil-up mil-mb-10">
                                 <span className="mil-additional-text mil-text-sm mil-upper"><Date dateString={postData.date} /></span>
                               </li>
@@ -85,135 +85,6 @@ async function PostsDetail( { params } ) {
           </div>
       </section>
       {/* blog end */}
-
-      {/* reply form */}
-      <section className="mil-soft-bg mil-relative">
-          <Image src="/img/other/bg.svg" className="mil-bg-img" alt="image" />
-
-          <div className="container mil-p-120-90">
-              <div className="mil-background-grid mil-softened" />
-              <form>
-                  <div className="row justify-content-between">
-                      <div className="col-lg-6">
-
-                          <div className="mil-mb-60">
-                              <h3 className="mil-upper mil-up mil-mb-30">Leave a Reply</h3>
-
-                              <div className="mil-input-frame mil-dark-input mil-up mil-mb-30">
-                                  <label className="mil-upper"><span>Write a comment</span><span className="mil-required">*</span></label>
-                                  <textarea cols="30" rows="10"></textarea>
-                              </div>
-                          </div>
-
-                      </div>
-                      <div className="col-lg-6">
-
-                          <div className="row align-items-end mil-mt-suptitle-offset">
-                              <div className="col-lg-6">
-
-                                  <div className="mil-input-frame mil-dark-input mil-up mil-mb-30">
-                                      <label className="mil-upper"><span>Full name</span><span className="mil-required">*</span></label>
-                                      <input type="text" placeholder="" />
-                                  </div>
-
-                              </div>
-                              <div className="col-lg-6">
-
-                                  <div className="mil-input-frame mil-dark-input mil-up mil-mb-30">
-                                      <label className="mil-upper"><span>Email address</span><span className="mil-required">*</span></label>
-                                      <input type="text" placeholder="email@mydomain.com" />
-                                  </div>
-
-                              </div>
-                              <div className="col-lg-6">
-
-                                  <div className="mil-input-frame mil-dark-input mil-up mil-mb-30">
-                                      <label className="mil-upper"><span>Website</span><span className="mil-required">*</span></label>
-                                      <input type="text" placeholder="" />
-                                  </div>
-
-                              </div>
-                              <div className="col-lg-6">
-
-                                  <div className="mil-up mil-mb-30">
-                                      <button type="submit" className="mil-button mil-fw">Submit Comment</button>
-                                  </div>
-
-                              </div>
-                          </div>
-                      </div>
-
-                  </div>
-              </form>
-          </div>
-      </section>
-      {/* reply form end */}
-
-      {/* comments */}
-      <section>
-          <div className="container mil-p-120-90">
-              <div className="mil-background-grid mil-softened" />
-
-              <div className="row">
-                  <div className="col-lg-7">
-                      
-                      <h3 className="mil-upper mil-mb-60">Comments - <span className="mil-marker">03</span></h3>
-
-                      <ul className="mil-comments">
-                          <li>
-                              <div className="mil-comment">
-                                  <div className="mil-comment-head">
-                                      <div className="mil-user-info">
-                                          <Image src="/img/faces/1.jpg" alt="portrait" className="mil-user-avatar" />
-                                          <div>
-                                              <h6 className="mil-upper mil-mb-5">Ponnappa Priya</h6>
-                                              <span className="mil-text-sm mil-dark-soft">September 23, 2023</span>
-                                          </div>
-                                      </div>
-                                      <a href="#." className="mil-mini-button">Reply</a>
-                                  </div>
-                                  <p>We realised we really wanted to catch a glimpse of what went on behind the scenes of the companies we looked up to.</p>
-                              </div>
-                              <ul className="mil-comments">
-                                  <li>
-                                      <div className="mil-comment">
-                                          <div className="mil-comment-head">
-                                              <div className="mil-user-info">
-                                                  <Image src="/img/faces/2.jpg" alt="portrait" className="mil-user-avatar" />
-                                                  <div>
-                                                      <h6 className="mil-upper mil-mb-5">Tamzyn French</h6>
-                                                      <span className="mil-text-sm mil-dark-soft">September 23, 2023</span>
-                                                  </div>
-                                              </div>
-                                              <a href="#." className="mil-mini-button">Reply</a>
-                                          </div>
-                                          <p>We realised we really wanted to catch a glimpse of what went on behind the scenes of the companies we looked up to.</p>
-                                      </div>
-                                  </li>
-                              </ul>
-                          </li>
-                          <li>
-                              <div className="mil-comment">
-                                  <div className="mil-comment-head">
-                                      <div className="mil-user-info">
-                                          <Image src="/img/faces/3.jpg" alt="portrait" className="mil-user-avatar" />
-                                          <div>
-                                              <h6 className="mil-upper mil-mb-5">Oscar Newman</h6>
-                                              <span className="mil-text-sm mil-dark-soft">September 23, 2023</span>
-                                          </div>
-                                      </div>
-                                      <a href="#." className="mil-mini-button">Reply</a>
-                                  </div>
-                                  <p>We realised we really wanted to catch a glimpse of what went on behind the scenes of the companies we looked up to.</p>
-                              </div>
-                          </li>
-                      </ul>
-
-                  </div>
-              </div>
-          </div>
-      </section>
-      {/* comments end */}
     </>
   );
 };

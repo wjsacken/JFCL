@@ -4,7 +4,7 @@ import Image from "next/image";
 import { notFound } from 'next/navigation';
 
 import { getAllTeamIds, getTeamData } from "@library/team";
-export const runtime = 'edge';
+
 export async function generateMetadata({ params }) {
     const postData = await getSingleTeamData(params);
 
@@ -24,7 +24,7 @@ async function TeamDetail( { params } ) {
             <div className="mil-team-member-frame">
                 <div className="mil-left-side">
                     <div className="mil-member-portrait">
-                        <Image src={postData.fullImage} alt={postData.name} />
+                        <Image width="530" height="636" src={postData.fullImage} alt={postData.name} />
                     </div>
                 </div>
                 <div className="mil-right-side">

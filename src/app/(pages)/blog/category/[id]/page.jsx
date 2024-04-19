@@ -8,7 +8,7 @@ import { notFound } from 'next/navigation';
 
 import { getAllCategoriesIds, getCategoryData, getSortedCategoriesData } from "@library/categories";
 import { getCategoryPosts } from "@library/posts";
-export const runtime = 'edge';
+
 export async function generateMetadata({ params }) {
   const categoryData = await getSingleCategoryData(params);
 
@@ -25,7 +25,7 @@ async function BlogCategory( { params } ) {
   return (
     <>
       
-      <PageBanner pageTitle={"Category: "+categoryData.title} breadTitle={categoryData.title} bgImage={"/img/photo/12.jpg"} />
+      <PageBanner width="1300" height="300"  pageTitle={"Category: "+categoryData.title} breadTitle={categoryData.title} bgImage={"/img/photo/12.jpg"} />
       
       {/* blog */}
       <section>

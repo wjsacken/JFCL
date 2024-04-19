@@ -11,7 +11,7 @@ const ProcessSlider = ( { bgStyle = "default", paddingTop = "120" } ) => {
         {/* process slider */}
         <section className={`mil-${bgStyle}-bg mil-relative`}>
             {bgStyle == "soft" &&
-            <Image src="/img/other/bg.svg" className="mil-bg-img" alt="background image" />
+            <Image src="/img/other/bg.svg" width="1300" height="300" className="mil-bg-img" alt="background image" />
             }
 
             <div className={`container mil-p-${paddingTop}-60`}>

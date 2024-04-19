@@ -24,7 +24,7 @@ const HeroTwoSlider = () => {
             >
                 {Data.items.map((item, key) => (
                 <SwiperSlide className="swiper-slide" key={`hero-two-slider-item-${key}`}>
-                    <Image src={item.image} className="mil-bg-img" alt={item.alt} data-swiper-parallax-x="300" data-swiper-parallax-scale="1.3" />
+                    <Image src={item.image} width="1300" height="300"  className="mil-bg-img" alt={item.alt} data-swiper-parallax-x="300" data-swiper-parallax-scale="1.3" />
                     <div className="mil-overlay" />
                     <div className="container">
                         <div className="mil-background-grid mil-top-space" />

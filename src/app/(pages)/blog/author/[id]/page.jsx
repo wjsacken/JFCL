@@ -9,7 +9,7 @@ import { notFound } from 'next/navigation';
 import { getSortedCategoriesData } from "@library/categories";
 import { getAllAuthorsIds, getAuthorData } from "@library/authors";
 import { getAuthorPosts } from "@library/posts";
-export const runtime = 'edge';
+
 export async function generateMetadata({ params }) {
   const authorData = await getSingleAuthorData(params);
   
@@ -26,7 +26,7 @@ async function BlogAuthor( { params } ) {
   return (
     <>
       
-      <PageBanner pageTitle={"Author: "+authorData.title} breadTitle={authorData.title} bgImage={"/img/photo/12.jpg"} />
+      <PageBanner width="1300" height="300"  pageTitle={"Author: "+authorData.title} breadTitle={authorData.title} bgImage={"/img/photo/12.jpg"} />
       
       {/* blog */}
       <section>

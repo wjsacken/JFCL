@@ -8,7 +8,6 @@ import PopularPosts from "@components/sections/PopularBlog";
 import { getSortedCategoriesData } from "@library/categories";
 import { getPaginatedPostsData, getFeaturedPostsData } from "@library/posts";
 import PopularsPostsData from "@data/sections/popular-blog.json";
-export const runtime = 'edge';
 export const metadata = {
   title: {
 		default: "Blog",
@@ -22,7 +21,7 @@ async function Blog() {
 
   return (
     <>
-      <PageBanner pageTitle={"Insights"} breadTitle={"Blog"} bgImage={"/img/photo/12.jpg"} />
+      <PageBanner pageTitle={"Blog"} breadTitle={"Blog"} bgImage={"/img/photo/16.jpg"} width="1300" height="300" />
 
       {/* blog */}
       <section>

@@ -9,7 +9,7 @@ import { notFound } from 'next/navigation';
 import { getSortedCategoriesData } from "@library/categories";
 import { getAllTagsIds, getTagData } from "@library/tags";
 import { getTagPosts } from "@library/posts";
-export const runtime = 'edge';
+
 export async function generateMetadata({ params }) {
   const tagData = await getSingleTagData(params);
   
@@ -26,7 +26,7 @@ async function BlogTag( { params } ) {
   return (
     <>
       
-      <PageBanner pageTitle={"Tag: "+tagData.title} breadTitle={tagData.title} bgImage={"/img/photo/12.jpg"} />
+      <PageBanner width="1300" height="300"  pageTitle={"Tag: "+tagData.title} breadTitle={tagData.title} bgImage={"/img/photo/12.jpg"} />
       
       {/* blog */}
       <section>
