@@ -27,16 +27,12 @@ async function Sidebar() {
             <div className="mil-divider-lg mil-up mil-mb-30"></div>
 
             <h6 className="mil-upper mil-up mil-mb-30">Authors</h6>
-
-            <ul className="mil-list mil-dark mil-mb-30">
-                {authors.map((item, key) => (
-                <li className="mil-text-sm mil-up mil-mb-10" key={`sidebar-author-item-${key}`}>
-                    <Link href={`/blog/author/${item.id}`}><Image width="300" height="60" src={item.avatar} alt={item.title} className="mil-pub-author" />
+            {authors.map((item, key) => (
+                <div className="mil-text-sm mil-up mil-mb-10" key={`sidebar-author-item-${key}`}>
+                    <Link href={`https://wallacegraham.com`} target="_blank"><Image width="300" height="60" src={item.avatar} alt={item.title} className="mil-pub-author" />
                     </Link>
-                </li>
+                </div>
                 ))}
-            </ul>
-
         </div>
         {/* sidebar end */}
     </>

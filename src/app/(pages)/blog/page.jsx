@@ -30,18 +30,8 @@ async function Blog() {
               <div className="row justify-content-between">
                   <div className="col-lg-7">
                       <PopularPosts posts={populars} />
+                      <div className="mil-divider-lg mil-up mil-mb-30"></div>
 
-                      {/* filter */}
-                      <div className="mil-filter mil-up mil-mb-90">
-                          <div className="mil-filter-links">
-                              <Link href="/blog" className="mil-current">All</Link>
-                              {categories.map((item, key) => (
-                              <Link key={`categories-item-${key}`} href={`/blog/category/${item.id}`}>{item.title}</Link>
-                              ))}
-                          </div>
-                      </div>
-                      {/* filter end */}
-                      
                       <PaginatedBlog
                         items={postsData.posts}
                       />

@@ -12,7 +12,6 @@ const PaginatedBlogPosts = ({ items }) => {
               <div className="mil-date"><Date dateString={item.date} /></div>
           </div>
           <div className="mil-description">
-              <span className="mil-suptitle mil-upper mil-up mil-mb-30">{item.category}</span>
               <h4 className="mil-upper mil-up mil-mb-30">{item.title}</h4>
               <p className="mil-up mil-mb-30">{item.short}</p>
               <span className="mil-link mil-upper mil-up">Read <span className="mil-arrow"><Image src="/img/icons/1.svg" width="20" height="20" alt="arrow" /></span></span>
