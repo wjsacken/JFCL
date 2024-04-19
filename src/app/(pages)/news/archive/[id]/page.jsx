@@ -9,7 +9,7 @@ import { notFound } from 'next/navigation';
 import { getSortedCategoriesData } from "@library/categories";
 import { getAllArchivesIds, getArchiveData } from "@library/archives";
 import { getArchivePosts } from "@library/posts";
-
+export const runtime = 'edge';
 export async function generateMetadata({ params }) {
   const archiveData = await getSingleArchiveData(params);
   

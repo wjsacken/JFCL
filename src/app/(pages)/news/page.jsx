@@ -13,7 +13,7 @@ import { getSortedCategoriesData } from "@library/categories";
 import { getPaginatedPostsData, getFeaturedPostsData } from "@library/articles";
 
 import PopularsPostsData from "@data/sections/popular-posts.json";
-
+export const runtime = 'edge';
 export const metadata = {
   title: {
 		default: "News",

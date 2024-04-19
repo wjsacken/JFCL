@@ -9,7 +9,7 @@ import { notFound } from 'next/navigation';
 import { getSortedCategoriesData } from "@library/categories";
 import { getAllAuthorsIds, getAuthorData } from "@library/authors";
 import { getAuthorPosts } from "@library/posts";
-
+export const runtime = 'edge';
 export async function generateMetadata({ params }) {
   const authorData = await getSingleAuthorData(params);
   

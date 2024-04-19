@@ -5,7 +5,7 @@ const ProjectsMasonry = dynamic( () => import("@components/ProjectsMasonry"), { 
 import { getSortedProjectsData } from "@library/projects";
 
 import PageBanner from "@components/PageBanner";
-
+export const runtime = 'edge';
 export const metadata = {
   title: {
 		default: "About",

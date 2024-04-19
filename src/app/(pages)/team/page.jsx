@@ -7,7 +7,7 @@ import { getSortedTeamData } from "@library/team";
 
 import PageBanner from "@components/PageBanner";
 import RecruitSection from "@components/sections/Recruit";
-
+export const runtime = 'edge';
 const TeamMasonry = dynamic( () => import("@components/TeamMasonry"), { ssr: false } );
 
 export const metadata = {

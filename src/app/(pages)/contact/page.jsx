@@ -6,7 +6,7 @@ import PageBanner from "@components/PageBanner";
 import ContactForm from "@components/ContactForm";
 import Image from "next/image";
 import Link from "next/link";
-
+export const runtime = 'edge';
 export const metadata = {
     title: {
         default: "Contact",

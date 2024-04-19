@@ -1,7 +1,7 @@
 import React from "react";
 import AppData from "@data/app.json";
 import PageBanner from "@components/PageBanner";
-
+export const runtime = 'edge';
 
 export const metadata = {
   title: {
