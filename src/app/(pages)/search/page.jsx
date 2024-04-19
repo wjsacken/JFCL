@@ -1,5 +1,4 @@
-import { promises as fs } from 'fs';
-import { useEffect, useState } from 'react';
+import React from 'react';
 import FilteredBlog from '@components/FilteredBlog';
 import AppData from "@data/app.json";
 import PageBanner from "@components/PageBanner";
@@ -15,8 +14,8 @@ export const metadata = {
 
 async function fetchPosts() {
   try {
-    const file = await fs.readFile(process.cwd() + '/src/data/.json/posts.json', 'utf8');
-    const posts = JSON.parse(file);
+    const response = await fetch(process.cwd() + '/src/data/.json/posts.json');
+    const posts = await response.json();
     return posts;
   } catch (error) {
     console.error('Error fetching posts:', error);
@@ -24,37 +23,42 @@ async function fetchPosts() {
   }
 }
 
-function Search() {
-  const [posts, setPosts] = useState([]);
+class Search extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      posts: [],
+    };
+  }
 
-  useEffect(() => {
-    async function fetchData() {
-      const generatedPosts = await generateJsonPostsData();
-      const fetchedPosts = await fetchPosts();
-      setPosts(fetchedPosts || generatedPosts);
-    }
+  async componentDidMount() {
+    const generatedPosts = await generateJsonPostsData();
+    const fetchedPosts = await fetchPosts();
+    this.setState({ posts: fetchedPosts || generatedPosts });
+  }
 
-    fetchData();
-  }, []);
+  render() {
+    const { posts } = this.state;
 
-  return (
-    <>
-      <PageBanner pageTitle={"Search: %s"} breadTitle={"Search"} bgImage={"/img/photo/12.jpg"} />
-      <section>
-        <div className="container mil-p-120-60">
-          <div className="mil-background-grid mil-softened"></div>
-          <div className="row justify-content-between">
-            <div className="col-lg-7">
-              <FilteredBlog posts={posts} />
-            </div>
-            <div className="col-lg-5">
-              <Sidebar />
+    return (
+      <>
+        <PageBanner pageTitle={"Search: %s"} breadTitle={"Search"} bgImage={"/img/photo/12.jpg"} />
+        <section>
+          <div className="container mil-p-120-60">
+            <div className="mil-background-grid mil-softened"></div>
+            <div className="row justify-content-between">
+              <div className="col-lg-7">
+                <FilteredBlog posts={posts} />
+              </div>
+              <div className="col-lg-5">
+                <Sidebar />
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-    </>
-  );
+        </section>
+      </>
+    );
+  }
 }
 
 export default Search;
