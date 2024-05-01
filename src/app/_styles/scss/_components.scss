@@ -359,7 +359,9 @@ counters
         width: 150px;
     }
 }
-
+.problem{
+   font-size: 32px 
+}
 /* -------------------------------------------
 
 illustrations
@@ -377,6 +379,20 @@ illustrations
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: center;
+    }
+}
+.mil-image-frame1 {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    & img {
+        width: 90%;
+        height: auto;
+        object-fit: contain;
         object-position: center;
     }
 }
@@ -909,6 +925,12 @@ accordion
     padding-left: 40px;
     height: 0;
     overflow: hidden;
+    & span {
+        color: #fff;
+        & a{
+            color: #cc101f !important
+        }
+    }
 }
 
 .mil-accordion-content.mil-expanded {

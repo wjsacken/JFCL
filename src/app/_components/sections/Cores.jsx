@@ -41,7 +41,7 @@ const CoresSection = () => {
 
                             </div>
                             <div className="mil-accordion-content">
-                                <p className="mil-light-soft mil-mb-30">{item.text}</p>
+                                <span className="mil-light-soft mil-mb-30" dangerouslySetInnerHTML={{__html : item.text}}></span>
                             </div>
                         </div>
                         ))}
