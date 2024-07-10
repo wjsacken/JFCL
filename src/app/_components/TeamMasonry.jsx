@@ -65,7 +65,7 @@ const TeamMasonry = ({ team, categories }) => {
     .sort((a, b) => a.order - b.order)
     .map((item, key) => (
       <div className={`col-sm-6 col-lg-3 mil-grid-item mil-up ${item.category_slug}`} key={`team-item-${key}`}>
-        <Link href={`/team/${item.id}`} className="mil-team-member">
+        <Link href={`/attorneys/${item.id}`} className="mil-team-member">
           <div className="mil-avatar mil-mb-30">
             <Image width="200" height="250" src={item.image} alt={item.name} />
           </div>
